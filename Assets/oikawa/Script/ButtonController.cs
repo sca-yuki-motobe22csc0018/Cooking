@@ -17,8 +17,8 @@ public class ButtonController : MonoBehaviour
         SceneManager.LoadScene("SettingScene");
     }
 
-    // İ’è‰æ–Ê•Â‚¶‚é
-    public void EndSetting()
+    // ƒ^ƒCƒgƒ‹‚Ö
+    public void TitleButton()
     {
         SceneManager.LoadScene("TitleScene");
     }

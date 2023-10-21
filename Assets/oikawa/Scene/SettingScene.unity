@@ -567,7 +567,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1298582625}
         m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-        m_MethodName: EndSetting
+        m_MethodName: TitleButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
