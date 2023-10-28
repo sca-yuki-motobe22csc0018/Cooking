@@ -13,19 +13,27 @@ public class TimeGaugeColorChange : MonoBehaviour
     private Image image_TimeGauge;
     private float time_ratio;
 
-    // これは制限時間
-    [SerializeField] private float second;
+
+    [SerializeField] private float target_Time; //  目標タイム(何秒でゲージを変化させたいか)
+    private float second;                       // これは残り時間
+    private float target_Frame;                 //  ゲージの減る量
 
     void Start()
     {
         image_TimeGauge = gameObject.GetComponent<Image>();
+
+        //  ここで一秒にどのくらいゲージを減らすか計算
+        target_Frame = 100 / target_Time;
+        //  自動で残り時間も調整
+        second = target_Time;
     }
 
     void Update()
     {
-        if (second <= 10)
+        //  残り時間が目標時間より小さい時に実行
+        if (second <= target_Time)
         {
-            time -= 10.0f * Time.deltaTime;
+            time -= target_Frame * Time.deltaTime;
             time_ratio = time / maxTime;
             second -= Time.deltaTime;
 
