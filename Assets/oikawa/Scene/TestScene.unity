@@ -291,6 +291,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 317921477678675029, guid: 6f60c8e981c91db43903478302491a27, type: 3}
+      propertyPath: target_Time
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1945969318899555808, guid: 6f60c8e981c91db43903478302491a27, type: 3}
       propertyPath: m_Name
       value: GaugeWindow
