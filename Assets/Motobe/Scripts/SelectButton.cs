@@ -20,41 +20,29 @@ public class SelectButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //VegetableButton = GetComponent<Button>();
-        //FishMeatButton = GetComponent<Button>();
-        //OthersButton = GetComponent<Button>();
-
         string Tag = this.gameObject.tag;
         if (Tag == "VegetableButton")
         {
             TagNum=1;
-            Debug.Log(Tag);
         }else
         if (Tag == "Fish&MeatButton")
          {
              TagNum = 2;
-            Debug.Log(Tag);
-        }
+         }
         else
-         if (Tag == "OthersButton")
-          {
+        if (Tag == "OthersButton")
+        {
               TagNum = 3;
-            Debug.Log(Tag);
         }
 
         button= GetComponent<Button>();
         button.onClick.AddListener(Select);
-
-        //VegetableButton.onClick.AddListener(Select);
-        //FishMeatButton.onClick.AddListener(Select);
-        //OthersButton.onClick.AddListener(Select);
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        
     }
 
     public void Select()
