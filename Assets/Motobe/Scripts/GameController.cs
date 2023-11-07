@@ -5,10 +5,12 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     [SerializeField] public static string Food;
+    [SerializeField] public static string Order;
     // Start is called before the first frame update
     void Start()
     {
         Food=null;
+        Order=null;
     }
 
     // Update is called once per frame

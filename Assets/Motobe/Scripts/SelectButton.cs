@@ -20,6 +20,7 @@ public class SelectButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        VegetableShelf.SetActive(true);
         string Tag = this.gameObject.tag;
         if (Tag == "VegetableButton")
         {
