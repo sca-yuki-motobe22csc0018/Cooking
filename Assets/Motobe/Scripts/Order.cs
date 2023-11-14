@@ -14,7 +14,7 @@ public class Order : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        this.tag="Untagged";
 
         num=0;
         request=false;
@@ -35,7 +35,60 @@ public class Order : MonoBehaviour
             }
             num =Random.Range(0,13);
             order[num].SetActive(true);
-            request=true;
+            this.tag="Untagged";
+            if (num == 0)
+            {
+                this.tag="Food01";
+            }
+            if (num == 1)
+            {
+                this.tag = "Food02";
+            }
+            if (num == 2)
+            {
+                this.tag = "Food03";
+            }
+            if (num == 3)
+            {
+                this.tag = "Food04";
+            }
+            if (num == 4)
+            {
+                this.tag = "Food05";
+            }
+            if (num == 5)
+            {
+                this.tag = "Food06";
+            }
+            if (num == 6)
+            {
+                this.tag = "Food07";
+            }
+            if (num == 7)
+            {
+                this.tag = "Food08";
+            }
+            if (num == 8)
+            {
+                this.tag = "Food09";
+            }
+            if (num == 9)
+            {
+                this.tag = "Food10";
+            }
+            if (num == 10)
+            {
+                this.tag = "Food11";
+            }
+            if (num == 11)
+            {
+                this.tag = "Food12";
+            }
+            if (num == 12)
+            {
+                this.tag = "Food13";
+            }
+            request =true;
         }
     }
 }
