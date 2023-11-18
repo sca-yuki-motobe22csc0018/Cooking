@@ -28,9 +28,19 @@ public class FinishButton : MonoBehaviour
         if (this.tag == orderobj.tag)
         {
             Score.plus=true;
+            CookingButton.finish = true;
+            Order.request = false;
         }
-        CookingButton.finish=true;
-        Order.request=false;
+        else if (this.tag == "Untagged") 
+        {
+            
+        }
+        else
+        {
+            Score.min = true;
+            CookingButton.finish = true;
+        }
+        
         
     }
 }

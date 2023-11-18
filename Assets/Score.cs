@@ -7,6 +7,8 @@ public class Score : MonoBehaviour
 {
     [SerializeField]public GameObject score;
     public static bool plus;
+    public static bool min;
+    int count;
     int pscore;
 
     public GameObject score_object = null; // Textオブジェクト
@@ -17,6 +19,7 @@ public class Score : MonoBehaviour
     {
         plus=false;
         Text score =GetComponent<Text>();
+        count=0;
         
     }
 
@@ -28,8 +31,15 @@ public class Score : MonoBehaviour
         score_text.text = "" + score_num;
         if (plus == true)
         {
-            score_num += 100;
+            count=0;
+            score_num += 1000;
             plus = false;
+        }
+        if (min == true)
+        {
+            count+=1;
+            score_num -= 100*count;
+            min = false;
         }
     }
 }

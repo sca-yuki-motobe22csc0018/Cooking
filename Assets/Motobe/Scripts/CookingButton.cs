@@ -54,6 +54,10 @@ public class CookingButton : MonoBehaviour
 
     void Click()
     {
+        if(Dish01.tag == "Untagged" && Dish02.tag == "Untagged" && Dish03.tag == "Untagged" && Dish04.tag == "Untagged" && Dish05.tag == "Untagged")
+        {
+            return;
+        }
         cooking=true;
         if(Dish01.tag=="Vegetable03"&& Dish02.tag == "Vegetable01"&& Dish03.tag == "Vegetable02" && Dish04.tag == "MeatFish02" && Dish05.tag == "Others05")
         {
