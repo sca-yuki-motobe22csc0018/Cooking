@@ -55,7 +55,7 @@ public class CookingButton : MonoBehaviour
     void Click()
     {
         cooking=true;
-        if(Dish01.tag=="Vegetable03"&& Dish02.tag == "Vegetable01"&& Dish03.tag == "Vegetable02" && Dish04.tag == "Others05" && Dish05.tag == "MeatFish02")
+        if(Dish01.tag=="Vegetable03"&& Dish02.tag == "Vegetable01"&& Dish03.tag == "Vegetable02" && Dish04.tag == "MeatFish02" && Dish05.tag == "Others05")
         {
             for (int i = 0; i < 14; ++i)
             {
@@ -65,7 +65,7 @@ public class CookingButton : MonoBehaviour
             this.tag = "Food01";
         }
         else
-        if (Dish01.tag == "MeatFish04" && Dish02.tag == "MeatFish05" && Dish03.tag == "Others05" && Dish04.tag == "MeatFish06" && Dish05.tag == "Vegetable03")
+        if (Dish01.tag == "MeatFish04" && Dish02.tag == "MeatFish05" && Dish03.tag == "MeatFish06" && Dish04.tag == "Vegetable03" && Dish05.tag == "Others05")
         {
             for (int i = 0; i < 14; ++i)
             {
