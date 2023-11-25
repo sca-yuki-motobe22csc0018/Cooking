@@ -22,5 +22,6 @@ public class DeleteButton : MonoBehaviour
     void Click()
     {
         CookingButton.finish=true;
+        this.gameObject.SetActive(false);
     }
 }

@@ -5,16 +5,13 @@ using UnityEngine.UI;
 
 public class FinishButton : MonoBehaviour
 {
-
-    private Button button;
     [SerializeField] public GameObject tagobj;
-    [SerializeField] public GameObject orderobj;
+    public GameObject delButton;
 
     // Start is called before the first frame update
     void Start()
     {
-        button = GetComponent<Button>();
-        button.onClick.AddListener(Click);
+        delButton.SetActive(false);
     }
 
     // Update is called once per frame
@@ -23,24 +20,17 @@ public class FinishButton : MonoBehaviour
         this.tag = tagobj.tag;
     }
 
-    void Click()
+    
+    public void delOn()
     {
-        if (this.tag == orderobj.tag)
+        if (this.tag!="Untagged")
         {
-            Score.plus=true;
-            CookingButton.finish = true;
-            Order.request = false;
+            delButton.SetActive(true);
         }
-        else if (this.tag == "Untagged") 
-        {
-            
-        }
-        else
-        {
-            Score.min = true;
-            CookingButton.finish = true;
-        }
-        
-        
+    }
+
+    public void delOff()
+    {
+        delButton.SetActive(false);
     }
 }

@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class DishButton : MonoBehaviour
 {
     private Button button;
     public static string Ingredient;
     [SerializeField] public GameObject[] Ingredients;
-    
-
+    bool delete;
+    public GameObject del;
     // Start is called before the first frame update
     void Start()
     {
+        delete=false;
+        del.SetActive(false);
         button = GetComponent<Button>();
         button.onClick.AddListener(Click);
         for(int i = 0; i < 18; ++i)
@@ -35,8 +38,20 @@ public class DishButton : MonoBehaviour
         }
     }
 
+    public void SetAt()
+    {
+        if(this.tag != "Untagged")
+        del.SetActive(true);
+    }
+
+    public void SetAf()
+    {
+        del.SetActive(false);
+    }
+
     void Click()
     {
+        del.SetActive(false);
         for (int i = 0; i < 18; ++i)
         {
             Ingredients[i].SetActive(false);

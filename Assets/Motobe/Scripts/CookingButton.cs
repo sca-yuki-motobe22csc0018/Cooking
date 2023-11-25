@@ -9,6 +9,7 @@ public class CookingButton : MonoBehaviour
     public static bool cooking=false;
     public int i=0;
     public static bool finish;
+    public GameObject submission;
     [SerializeField] public GameObject Dish01;
     [SerializeField] public GameObject Dish02;
     [SerializeField] public GameObject Dish03;
@@ -28,6 +29,7 @@ public class CookingButton : MonoBehaviour
         {
             Food[i].SetActive(false);
         }
+        submission.SetActive(false);
     }
 
     // Update is called once per frame
@@ -49,6 +51,14 @@ public class CookingButton : MonoBehaviour
             }
             this.tag = "Untagged";
             finish=false;
+        }
+        if(this.tag!= "Untagged")
+        {
+            submission.SetActive(true);
+        }
+        else
+        {
+            submission.SetActive(false);
         }
     }
 
