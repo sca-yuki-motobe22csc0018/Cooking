@@ -48,6 +48,7 @@ public class SelectButton : MonoBehaviour
 
     public void Select()
     {
+        ShelfSelect.Change=true;
         if (TagNum == 1)
         {
             VegetableShelf.SetActive(true);
