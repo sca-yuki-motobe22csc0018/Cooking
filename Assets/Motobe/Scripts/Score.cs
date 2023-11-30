@@ -12,15 +12,16 @@ public class Score : MonoBehaviour
     int pscore;
 
     public GameObject score_object = null; // Textオブジェクト
-    public int score_num = 0; // スコア変数
+    public static int score_num = 0; // スコア変数
 
     // Start is called before the first frame update
     void Start()
     {
+        score_num=0;
         plus=false;
+        min=false;
         Text score =GetComponent<Text>();
         count=0;
-        
     }
 
     // Update is called once per frame
