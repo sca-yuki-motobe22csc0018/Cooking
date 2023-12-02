@@ -1,10 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ButtonController : MonoBehaviour
 {
+    public GameObject titlePanel;
+    public GameObject settingPanel;
+
+    void Start()
+    {
+        //  タイトル画面表示＆設定画面非表示
+        titlePanel.SetActive(true);
+        settingPanel.SetActive(false);
+    }
+
     // ゲームスタート
     public void StartGame()
     {
@@ -14,13 +25,17 @@ public class ButtonController : MonoBehaviour
     // 設定画面開く
     public void GameSetting()
     {
-        SceneManager.LoadScene("SettingScene");
+        //  タイトル画面非表示＆設定画面表示
+        titlePanel.SetActive(false);
+        settingPanel.SetActive(true);
     }
 
     // タイトルへ
     public void TitleButton()
     {
-        SceneManager.LoadScene("TitleScene");
+        //  タイトル画面表示＆設定画面非表示
+        titlePanel.SetActive(true);
+        settingPanel.SetActive(false);
     }
 
     //　ゲーム終了

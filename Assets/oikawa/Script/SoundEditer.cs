@@ -1,44 +1,27 @@
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Audio;
 
 public class SoundEditer : MonoBehaviour
 {
-    [SerializeField] AudioMixer audioMixer;
-    [SerializeField] Slider BGM_Slider;
-    [SerializeField] Slider SE_Slider;
+    [SerializeField] private AudioSource BGM_AudioSource;
+    [SerializeField] private AudioSource SE_AudioSource;
 
-    void Start()
+    private void Start()
     {
-        //  スライダーを動かしたときの処理を登録
-        BGM_Slider.onValueChanged.AddListener(SetAudioMixerBGM);
-        SE_Slider.onValueChanged.AddListener(SetAudioMixerSE);
+        // "AudioSource"コンポーネントを取得
+        BGM_AudioSource = gameObject.GetComponent<AudioSource>();
+        SE_AudioSource = gameObject.GetComponent<AudioSource>();
+
     }
 
-    public void SetAudioMixerBGM(float value)
+    public void BGM_SoundSliderOnValueChange(float newSliderValue)
     {
-        //  5段階補正
-        value /= 5;
-        //  -80～0に変換
-        var volume = Mathf.Clamp(Mathf.Log10(value) * 20f, -80f, 0f);
-        //  audioMixerに代入
-        audioMixer.SetFloat("BGM", volume);
-        Debug.Log($"BGM:{volume}");
+        // BGMの音量をスライドバーの値に変更
+        BGM_AudioSource.volume = newSliderValue;
     }
 
-    public void SetAudioMixerSE(float value)
+    public void SE_SoundSliderOnValueChange(float newSliderValue)
     {
-        //  5段階補正
-        value /= 6;
-        //  -80～0に変換
-        var volume = Mathf.Clamp(Mathf.Log10(value) * 20f, -80f, 0f);
-        //  audioMixerに代入
-        audioMixer.SetFloat("SE", volume);
-        Debug.Log($"SE:{volume}");
-    }
-
-    void Update()
-    {
-
+        //  SEの音量をスライドバーの値に変更
+        SE_AudioSource.volume = newSliderValue;
     }
 }
