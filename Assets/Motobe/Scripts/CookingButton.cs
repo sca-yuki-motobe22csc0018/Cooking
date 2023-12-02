@@ -64,6 +64,7 @@ public class CookingButton : MonoBehaviour
 
     void Click()
     {
+        DishButton.DishCount=0;
         if(Dish01.tag == "Untagged" && Dish02.tag == "Untagged" && Dish03.tag == "Untagged" && Dish04.tag == "Untagged" && Dish05.tag == "Untagged")
         {
             return;

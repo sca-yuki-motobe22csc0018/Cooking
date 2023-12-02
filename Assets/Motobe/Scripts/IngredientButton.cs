@@ -30,8 +30,12 @@ public class IngredientButton : MonoBehaviour
 
     void Click()
     {
-        GameController.Food = IngredientName;
-        ShelfSelect.Change=true;
-        select=true;
+        if(DishButton.DishCount<5)
+        { 
+            DishButton.DishCount += 1;
+            GameController.Food = IngredientName;
+            ShelfSelect.Change=true;
+            //select=true;
+        }
     }
 }

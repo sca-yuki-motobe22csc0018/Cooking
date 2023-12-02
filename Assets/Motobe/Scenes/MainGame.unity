@@ -6377,6 +6377,8 @@ MonoBehaviour:
   - {fileID: 1847103848}
   - {fileID: 972163217}
   del: {fileID: 677534508}
+  DishNum: 3
+  beforeDish: {fileID: 0}
 --- !u!114 &607339929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8150,6 +8152,8 @@ MonoBehaviour:
   - {fileID: 1270780621}
   - {fileID: 2018465648}
   del: {fileID: 1231701630}
+  DishNum: 2
+  beforeDish: {fileID: 0}
 --- !u!114 &704482911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10236,6 +10240,8 @@ MonoBehaviour:
   - {fileID: 1798564653}
   - {fileID: 1946765837}
   del: {fileID: 673768603}
+  DishNum: 5
+  beforeDish: {fileID: 0}
 --- !u!114 &887709446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12352,6 +12358,8 @@ MonoBehaviour:
   - {fileID: 1845671205}
   - {fileID: 1453370706}
   del: {fileID: 1412927728}
+  DishNum: 1
+  beforeDish: {fileID: 0}
 --- !u!114 &1039748797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13499,6 +13507,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b984a5b975693342a8082b2014f9a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dish:
+  - {fileID: 1039748790}
+  - {fileID: 704482905}
+  - {fileID: 607339923}
+  - {fileID: 1886653542}
+  - {fileID: 887709440}
 --- !u!4 &1184382625
 Transform:
   m_ObjectHideFlags: 0
@@ -21462,6 +21476,8 @@ MonoBehaviour:
   - {fileID: 600081588}
   - {fileID: 62450627}
   del: {fileID: 2035409701}
+  DishNum: 4
+  beforeDish: {fileID: 0}
 --- !u!114 &1886653548
 MonoBehaviour:
   m_ObjectHideFlags: 0
