@@ -23,7 +23,8 @@ public class IngredientButton : MonoBehaviour
     {
         if (select == true)
         {
-            Select.SetActive(true);
+            //Select.SetActive(true);
+            GameController.Food=null;
             select=false;
         }
     }
