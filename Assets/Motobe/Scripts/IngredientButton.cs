@@ -34,6 +34,7 @@ public class IngredientButton : MonoBehaviour
         if(DishButton.DishCount<5)
         { 
             DishButton.DishCount += 1;
+            DishButton.set=true;
             GameController.Food = IngredientName;
             ShelfSelect.Change=true;
             //select=true;

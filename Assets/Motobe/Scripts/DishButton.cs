@@ -15,6 +15,7 @@ public class DishButton : MonoBehaviour
     public int DishNum;
     public GameObject beforeDish;
     private bool Set;
+    public static bool set;
 
     // Start is called before the first frame update
     void Start()
@@ -45,7 +46,11 @@ public class DishButton : MonoBehaviour
         }
         if (DishCount == DishNum)
         {
-            this.tag = Ingredient;
+            if (set==true)
+            {
+                this.tag = Ingredient;
+                set = false;    
+            }
         }
 
         if (this.tag == "Untagged")
@@ -59,75 +64,77 @@ public class DishButton : MonoBehaviour
 
         if (this.tag == "Vegetable01")
         {
-            if (Set == false)
+            for (int i = 0; i < 18; ++i)
             {
-                for (int i = 0; i < 18; ++i)
+                if (i==0)
                 {
-                    Ingredients[i].SetActive(false);
+                    continue;
                 }
+                Ingredients[i].SetActive(false);
             }
             Ingredients[0].SetActive(true);
-            Set =true;
         }
+
         if (this.tag == "Vegetable02")
         {
-            if (Set == false)
+            for (int i = 0; i < 18; ++i)
             {
-                for (int i = 0; i < 18; ++i)
+                if (i == 1)
                 {
-                    Ingredients[i].SetActive(false);
+                    continue;
                 }
+                Ingredients[i].SetActive(false);
             }
             Ingredients[1].SetActive(true);
-            Set = true;
         }
+
         if (this.tag == "Vegetable03")
         {
-            if (Set == false)
+            for (int i = 0; i < 18; ++i)
             {
-                for (int i = 0; i < 18; ++i)
+                if (i == 2)
                 {
-                    Ingredients[i].SetActive(false);
+                    continue;
                 }
+                Ingredients[i].SetActive(false);
             }
             Ingredients[2].SetActive(true);
-            Set = true;
         }
         if (this.tag == "Vegetable04")
         {
-            if (Set == false)
+            for (int i = 0; i < 18; ++i)
             {
-                for (int i = 0; i < 18; ++i)
+                if (i == 3)
                 {
-                    Ingredients[i].SetActive(false);
+                    continue;
                 }
+                Ingredients[i].SetActive(false);
             }
             Ingredients[3].SetActive(true);
-            Set = true;
         }
         if (this.tag == "Vegetable05")
         {
-            if (Set == false)
+            for (int i = 0; i < 18; ++i)
             {
-                for (int i = 0; i < 18; ++i)
+                if (i == 4)
                 {
-                    Ingredients[i].SetActive(false);
+                    continue;
                 }
+                Ingredients[i].SetActive(false);
             }
             Ingredients[4].SetActive(true);
-            Set = true;
         }
         if (this.tag == "Vegetable06")
         {
-            if (Set == false)
+            for (int i = 0; i < 18; ++i)
             {
-                for (int i = 0; i < 18; ++i)
+                if (i == 5)
                 {
-                    Ingredients[i].SetActive(false);
+                    continue;
                 }
+                Ingredients[i].SetActive(false);
             }
             Ingredients[5].SetActive(true);
-            Set = true;
         }
         if (this.tag == "MeatFish01")
         {
@@ -273,58 +280,6 @@ public class DishButton : MonoBehaviour
             Ingredients[17].SetActive(true);
             Set = true;
         }
-
-        if (Set == false)
-        {
-            for (int i = 0; i < 18; ++i)
-            {
-                Ingredients[i].SetActive(false);
-            }
-        }
-        /*
-            if (Ingredient == "Others01")
-            {
-                Ingredients[12].SetActive(true);
-                Ingredient = null;
-                GameController.Food = null;
-                this.tag = "Others01";
-            }
-            if (Ingredient == "Others02")
-            {
-                Ingredients[13].SetActive(true);
-                Ingredient = null;
-                GameController.Food = null;
-                this.tag = "Others02";
-            }
-            if (Ingredient == "Others03")
-            {
-                Ingredients[14].SetActive(true);
-                Ingredient = null;
-                GameController.Food = null;
-                this.tag = "Others03";
-            }
-            if (Ingredient == "Others04")
-            {
-                Ingredients[15].SetActive(true);
-                Ingredient = null;
-                GameController.Food = null;
-                this.tag = "Others04";
-            }
-            if (Ingredient == "Others05")
-            {
-                Ingredients[16].SetActive(true);
-                Ingredient = null;
-                GameController.Food = null;
-                this.tag = "Others05";
-            }
-            if (Ingredient == "Others06")
-            {
-                Ingredients[17].SetActive(true);
-                Ingredient = null;
-                GameController.Food = null;
-                this.tag = "Others06";
-            }
-        }*/
     }
 
     public void SetAt()
@@ -340,7 +295,6 @@ public class DishButton : MonoBehaviour
 
     void Click()
     {
-        Set=false;
         if (this.tag != "Untagged")
         {
             DishCount -= 1;
