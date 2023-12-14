@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class ShelfSelect : MonoBehaviour
 {
-    [SerializeField] GameObject[] Select;
+    //[SerializeField] GameObject[] Select;
     public static bool Change=false;
     // Start is called before the first frame update
     void Start()
     {
         for (int i = 0; i < 18; ++i)
         {
-            Select[i].SetActive(false);
+            //Select[i].SetActive(false);
         }
         Change=false;
     }
@@ -24,7 +24,7 @@ public class ShelfSelect : MonoBehaviour
         {
             for (int i = 0; i < 18; ++i)
             {
-                Select[i].SetActive(false);
+                //Select[i].SetActive(false);
             }
             Change = false;
         }
