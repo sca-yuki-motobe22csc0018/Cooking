@@ -13,6 +13,8 @@ public class SelectButton : MonoBehaviour
     [SerializeField] private GameObject VegetableShelf;
     [SerializeField] private GameObject FishMeatShelf;
     [SerializeField] private GameObject OthersShelf;
+    bool big;
+
 
     private Button button;
 
@@ -35,15 +37,22 @@ public class SelectButton : MonoBehaviour
         {
               TagNum = 3;
         }
-
-        button= GetComponent<Button>();
+        big = false;
+        button = GetComponent<Button>();
         button.onClick.AddListener(Select);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (big == true)
+        {
+            this.gameObject.transform.localScale = new Vector3(1.2f, 1.2f, 1);
+        }
+        else
+        {
+            this.gameObject.transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 
     public void Select()
@@ -67,5 +76,13 @@ public class SelectButton : MonoBehaviour
             FishMeatShelf.SetActive(false);
             OthersShelf.SetActive(true);
         }
+    }
+    public void UP()
+    {
+        big = true;
+    }
+    public void Down()
+    {
+        big = false;
     }
 }

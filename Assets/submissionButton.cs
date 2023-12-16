@@ -29,7 +29,6 @@ public class submissionButton : MonoBehaviour
         {
             Score.plus = true;
             CookingButton.finish = true;
-            Order.request = false;
         }
         else if (finbutton.tag == "Untagged")
         {

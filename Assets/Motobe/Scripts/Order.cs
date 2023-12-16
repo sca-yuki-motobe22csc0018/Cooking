@@ -27,12 +27,16 @@ public class Order : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (request == false)
+        if (Score.plus == true)
         {
             for (int i = 0; i < 13; ++i)
             {
                 order[i].SetActive(false);
             }
+        }
+        if (request == false)
+        {
+            
             num =Random.Range(0,13);
             order[num].SetActive(true);
             this.tag="Untagged";
