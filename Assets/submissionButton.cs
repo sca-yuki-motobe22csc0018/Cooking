@@ -7,6 +7,7 @@ public class submissionButton : MonoBehaviour
 {
     private Button button;
     public GameObject finbutton;
+    float sin;
 
     [SerializeField] public GameObject orderobj;
 
@@ -20,7 +21,8 @@ public class submissionButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        sin = Mathf.Sin(Time.time * 8);
+        this.gameObject.transform.localScale = new Vector3(sin * 0.05f + 1.2f, sin * 0.05f + 1.2f, 1);
     }
 
     void Click()
@@ -28,7 +30,7 @@ public class submissionButton : MonoBehaviour
         if (finbutton.tag == orderobj.tag)
         {
             Score.plus = true;
-            CookingButton.finish = true;
+            
         }
         else if (finbutton.tag == "Untagged")
         {

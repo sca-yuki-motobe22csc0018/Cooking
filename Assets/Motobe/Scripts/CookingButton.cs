@@ -16,6 +16,7 @@ public class CookingButton : MonoBehaviour
     [SerializeField] public GameObject Dish04;
     [SerializeField] public GameObject Dish05;
     [SerializeField] public GameObject[] Food;
+    float sin;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +36,8 @@ public class CookingButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        sin = Mathf.Sin(Time.time);
+        this.gameObject.transform.localScale = new Vector3(sin * 0.05f + 1, sin * 0.05f + 1, 1);
         if (cooking == true)
         {
             i+=1;

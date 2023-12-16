@@ -8,8 +8,8 @@ public class Order : MonoBehaviour
     [SerializeField]public GameObject[] order;
     public static bool request;
     int num=0;
-
-    
+    float sin;
+    public static int miss;
 
     // Start is called before the first frame update
     void Start()
@@ -22,11 +22,14 @@ public class Order : MonoBehaviour
         {
             order[i].SetActive(false);
         }
+        miss=0+1;
     }
 
     // Update is called once per frame
     void Update()
     {
+        sin = Mathf.Sin(Time.time*miss*miss);
+        this.gameObject.transform.localScale = new Vector3(sin*0.1f+1, sin*0.1f+1, 1);
         if (Score.plus == true)
         {
             for (int i = 0; i < 13; ++i)

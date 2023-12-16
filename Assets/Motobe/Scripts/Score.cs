@@ -13,7 +13,7 @@ public class Score : MonoBehaviour
 
     public GameObject score_object = null; // Textオブジェクト
     public static int score_num = 0; // スコア変数
-
+    float sin;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +27,8 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        sin = Mathf.Sin(Time.time);
+        this.gameObject.transform.localScale = new Vector3(sin * 0.03f + 1, sin * 0.03f + 1, 1);
         // オブジェクトからTextコンポーネントを取得
         Text score_text = score_object.GetComponent<Text>();
         score_text.text = "" + score_num;
@@ -35,12 +37,14 @@ public class Score : MonoBehaviour
             count=0;
             score_num += 1000;
             plus = false;
+            Order.miss=1;
         }
         if (min == true)
         {
             count+=1;
             score_num -= 100*count;
             min = false;
+            Order.miss+=1;
         }
     }
 }
