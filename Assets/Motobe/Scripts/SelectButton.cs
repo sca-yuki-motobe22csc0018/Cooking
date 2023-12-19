@@ -15,6 +15,9 @@ public class SelectButton : MonoBehaviour
     [SerializeField] private GameObject OthersShelf;
     bool big;
 
+    float sin;
+    public float speedchange;
+    public float sizechange;
 
     private Button button;
 
@@ -22,6 +25,7 @@ public class SelectButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         VegetableShelf.SetActive(true);
         string Tag = this.gameObject.tag;
         if (Tag == "VegetableButton")
@@ -40,14 +44,19 @@ public class SelectButton : MonoBehaviour
         big = false;
         button = GetComponent<Button>();
         button.onClick.AddListener(Select);
+
+        speedchange = 10.0f;
+        sizechange = 0.05f;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        sin = Mathf.Sin(Time.time * speedchange);
         if (big == true)
         {
-            this.gameObject.transform.localScale = new Vector3(1.2f, 1.2f, 1);
+            this.gameObject.transform.localScale = new Vector3(1.2f + sin * sizechange, 1.2f + sin * sizechange, 1);
         }
         else
         {

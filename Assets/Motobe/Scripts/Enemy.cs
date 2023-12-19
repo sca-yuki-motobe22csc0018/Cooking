@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
         {
             Food[i].SetActive(false);
         }
-        for (int i = 0; i < 3; ++i)
+        for (int i = 0; i < 6; ++i)
         {
             evaluation[i].SetActive(false);
         }
@@ -28,11 +28,23 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Order.miss == 2)
+        {
+            evaluation[3].SetActive(true);
+        }
+        if (Order.miss == 3)
+        {
+            evaluation[4].SetActive(true);
+        }
+        if (Order.miss == 4)
+        {
+            evaluation[5].SetActive(true);
+        }
         my.position+= new Vector3(x,0,0);
         if (Score.plus == true)
         {
             change=true;
-            x=-4;
+            x=-2;
             if(cookbutton.tag== "Food01")
             {
                 Food[0].SetActive(true);
@@ -105,14 +117,14 @@ public class Enemy : MonoBehaviour
         }
         if (my.position.x<-200)
         {
-            x=4;
+            x=2;
             change=false;
             for (int i = 0; i < 13; ++i)
             {
                 Food[i].SetActive(false);
             }
             Order.request = false;
-            for (int i = 0; i < 3; ++i)
+            for (int i = 0; i < 6; ++i)
             {
                 evaluation[i].SetActive(false);
             }

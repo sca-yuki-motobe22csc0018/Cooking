@@ -16,6 +16,7 @@ public class DishButton : MonoBehaviour
     public GameObject beforeDish;
     private bool Set;
     public static bool set;
+    bool delset;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class DishButton : MonoBehaviour
         del.SetActive(false);
         button = GetComponent<Button>();
         button.onClick.AddListener(Click);
+        delset=false;
         for(int i = 0; i < 18; ++i)
         {
             Ingredients[i].SetActive(false);
@@ -52,7 +54,11 @@ public class DishButton : MonoBehaviour
                 set = false;    
             }
         }
-
+        if (delset==true&&this.tag!= "Untagged")
+        {
+            del.SetActive(true);
+            delset=false;
+        }
         if (this.tag == "Untagged")
         {
             for (int i = 0; i < 18; ++i)
@@ -285,12 +291,16 @@ public class DishButton : MonoBehaviour
     public void SetAt()
     {
         if(this.tag != "Untagged")
-        del.SetActive(true);
+        {
+            del.SetActive(true);
+        }
+        
     }
 
     public void SetAf()
     {
         del.SetActive(false);
+        delset=false;
     }
 
     void Click()
@@ -299,7 +309,7 @@ public class DishButton : MonoBehaviour
         {
             DishCount -= 1;
             del.SetActive(false);
-            
+            delset =true;
         }
         for (int i = 0; i < 18; ++i)
         {

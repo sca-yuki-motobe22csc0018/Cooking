@@ -5,6 +5,8 @@ using UnityEngine;
 public class size : MonoBehaviour
 {
     float sin;
+    public float speedchange;
+    public float sizechange;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +16,7 @@ public class size : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        sin = Mathf.Sin(Time.time*8);
-        this.gameObject.transform.localScale = new Vector3(sin * 0.2f + 1, sin * 0.2f + 1, 1);
+        sin = Mathf.Sin(Time.time*speedchange);
+        this.gameObject.transform.localScale = new Vector3(sin * sizechange + 1, sin * sizechange + 1, 1);
     }
 }
