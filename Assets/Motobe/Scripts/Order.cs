@@ -29,7 +29,7 @@ public class Order : MonoBehaviour
     void Update()
     {
         sin = Mathf.Sin(Time.time*miss*miss);
-        this.gameObject.transform.localScale = new Vector3(sin*0.1f+1, sin*0.1f+1, 1);
+        this.gameObject.transform.localScale = new Vector3(sin*0.1f+1, -sin*0.1f-1, 1);
         if (Score.plus == true)
         {
             for (int i = 0; i < 13; ++i)

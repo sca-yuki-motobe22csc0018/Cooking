@@ -8,7 +8,7 @@ public class ClearCount : MonoBehaviour
 {
     public GameObject score_object = null; // Textオブジェクト
     public static int score_num = 0; // スコア変数
-    public static int ClearCountSet;
+    public static int ClearCountSet=1;
     public static bool timer;
     public GameObject Timer;
     // Start is called before the first frame update
@@ -28,13 +28,20 @@ public class ClearCount : MonoBehaviour
     void Update()
     {
         Text score_text = score_object.GetComponent<Text>();
-        if (score_num < 10)
+        if (ClearCountSet>=10)
         {
-            score_text.text = "Clear:  " + score_num;
+            if (score_num<10)
+            {
+                score_text.text = "Clear: 0" + score_num+"/"+ClearCountSet;
+            }
+            else
+            {
+                score_text.text = "Clear: " + score_num+"/"+ClearCountSet;
+            }
         }
         else
         {
-            score_text.text = "Clear: " + score_num;
+            score_text.text = "Clear: 0" + score_num + "/0" + ClearCountSet;
         }
         
         

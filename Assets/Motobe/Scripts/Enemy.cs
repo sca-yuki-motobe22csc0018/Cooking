@@ -115,7 +115,7 @@ public class Enemy : MonoBehaviour
             }
 
         }
-        if (my.position.x<-200)
+        if (my.position.x<-250)
         {
             x=8;
             change=false;
