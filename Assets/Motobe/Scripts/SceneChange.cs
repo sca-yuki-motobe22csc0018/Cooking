@@ -19,7 +19,6 @@ public class SceneChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     void Click()
@@ -29,7 +28,7 @@ public class SceneChange : MonoBehaviour
             SceneManager.LoadScene("TitleScene");
         }else if (this.tag == "Restart")
         {
-            SceneManager.LoadScene("MainGame");
+            SceneManager.LoadScene("MainGameSelect");
         }else if (this.tag == "Del")
         {
             setting.SetActive(false);

@@ -14,7 +14,8 @@ public class TimeGaugeColorChange : MonoBehaviour
     private float time_ratio;
 
 
-    [SerializeField] private float target_Time; //  目標タイム(何秒でゲージを変化させたいか)
+    // 変えます　本部[SerializeField] private float target_Time; //  目標タイム(何秒でゲージを変化させたいか)
+    public static float target_Time;
     private float second;                       // これは残り時間
     private float target_Frame;                 //  ゲージの減る量
 
@@ -54,7 +55,7 @@ public class TimeGaugeColorChange : MonoBehaviour
         }
         if (second <= 0)
         {
-            SceneManager.LoadScene("ScoreScene");
+            SceneManager.LoadScene("Score");
         }
     }
 }

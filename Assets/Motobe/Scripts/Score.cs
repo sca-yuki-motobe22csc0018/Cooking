@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-    [SerializeField]public GameObject score;
+    //[SerializeField]public GameObject score;
     public static bool plus;
     public static bool min;
     int count;
-    int pscore;
+    //int pscore;
 
     public GameObject score_object = null; // Textオブジェクト
     public static int score_num = 0; // スコア変数
@@ -20,7 +20,7 @@ public class Score : MonoBehaviour
         score_num=0;
         plus=false;
         min=false;
-        Text score =GetComponent<Text>();
+        //Text score =GetComponent<Text>();
         count=0;
     }
 
@@ -38,6 +38,7 @@ public class Score : MonoBehaviour
             score_num += 1000;
             plus = false;
             Order.miss=1;
+            ClearCount.score_num+=1;
         }
         if (min == true)
         {

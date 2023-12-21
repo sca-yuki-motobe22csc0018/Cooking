@@ -37,23 +37,35 @@ public class DifficultySelect : MonoBehaviour
     {
         if (this.tag == "easy")
         {
-            SceneManager.LoadScene("MainGame");
+            ClearCount.ClearCountSet=3;
+            ClearCount.timer=false;
+            SceneManager.LoadScene("Main");
         }
         else if (this.tag == "normal")
         {
-            SceneManager.LoadScene("MainGame");
+            ClearCount.ClearCountSet = 5;
+            ClearCount.timer = false;
+            SceneManager.LoadScene("Main");
         }
         else if (this.tag == "hard")
         {
-            SceneManager.LoadScene("MainGame");
+            ClearCount.ClearCountSet = 8;
+            ClearCount.timer = false;
+            SceneManager.LoadScene("Main");
         }
         else if (this.tag == "veryhard")
         {
-            SceneManager.LoadScene("MainGame");
+            ClearCount.ClearCountSet = 10;
+            ClearCount.timer = true;
+            TimeGaugeColorChange.target_Time=300;
+            SceneManager.LoadScene("Main");
         }
         else if (this.tag == "hell")
         {
-            SceneManager.LoadScene("MainGame");
+            ClearCount.ClearCountSet = 20;
+            ClearCount.timer = true;
+            TimeGaugeColorChange.target_Time = 180;
+            SceneManager.LoadScene("Main");
         }
         else if (this.tag == "regacy")
         {

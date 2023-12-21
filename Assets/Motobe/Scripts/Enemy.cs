@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour
         if (Score.plus == true)
         {
             change=true;
-            x=-2;
+            x=-8;
             if(cookbutton.tag== "Food01")
             {
                 Food[0].SetActive(true);
@@ -117,7 +117,7 @@ public class Enemy : MonoBehaviour
         }
         if (my.position.x<-200)
         {
-            x=2;
+            x=8;
             change=false;
             for (int i = 0; i < 13; ++i)
             {

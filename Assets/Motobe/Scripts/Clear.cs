@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreSet : MonoBehaviour
+public class Clear : MonoBehaviour
 {
     public GameObject score_object = null;
     // Start is called before the first frame update
@@ -16,6 +16,13 @@ public class ScoreSet : MonoBehaviour
     void Update()
     {
         Text score_text = score_object.GetComponent<Text>();
-        score_text.text = "" + Score.score_num;
+        if (ClearCount.score_num < 10)
+        {
+            score_text.text = "Clear:  " + ClearCount.score_num;
+        }
+        else
+        {
+            score_text.text = "Clear: " + ClearCount.score_num;
+        }
     }
 }
