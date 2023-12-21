@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/oikawa/Scene/SettingScene.unity
     guid: 0eb85cdc431642d4f97e8f1677e2292b
+  - enabled: 1
+    path: Assets/Motobe/Scenes/MainGameSelect.unity
+    guid: 4b5d834756e7fdf4f9a4fc6e4840fe77
   m_configObjects: {}

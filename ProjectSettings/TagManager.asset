@@ -40,6 +40,15 @@ TagManager:
   - Food12
   - Food13
   - Food14
+  - Title
+  - Restart
+  - Del
+  - easy
+  - normal
+  - hard
+  - veryhard
+  - hell
+  - regacy
   layers:
   - Default
   - TransparentFX

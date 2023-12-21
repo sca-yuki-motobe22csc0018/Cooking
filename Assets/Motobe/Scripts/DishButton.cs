@@ -144,147 +144,147 @@ public class DishButton : MonoBehaviour
         }
         if (this.tag == "MeatFish01")
         {
-            if (Set == false)
+            for (int i = 0; i < 18; ++i)
             {
-                for (int i = 0; i < 18; ++i)
+                if (i == 6)
                 {
-                    Ingredients[i].SetActive(false);
+                    continue;
                 }
+                Ingredients[i].SetActive(false);
             }
             Ingredients[6].SetActive(true);
-            Set = true;
         }
         if (this.tag == "MeatFish02")
         {
-            if (Set == false)
+            for (int i = 0; i < 18; ++i)
             {
-                for (int i = 0; i < 18; ++i)
+                if (i == 7)
                 {
-                    Ingredients[i].SetActive(false);
+                    continue;
                 }
+                Ingredients[i].SetActive(false);
             }
             Ingredients[7].SetActive(true);
-            Set = true;
         }
         if (this.tag == "MeatFish03")
         {
-            if (Set == false)
+            for (int i = 0; i < 18; ++i)
             {
-                for (int i = 0; i < 18; ++i)
+                if (i == 8)
                 {
-                    Ingredients[i].SetActive(false);
+                    continue;
                 }
+                Ingredients[i].SetActive(false);
             }
             Ingredients[8].SetActive(true);
-            Set = true;
         }
         if (this.tag == "MeatFish04")
         {
-            if (Set == false)
+            for (int i = 0; i < 18; ++i)
             {
-                for (int i = 0; i < 18; ++i)
+                if (i == 9)
                 {
-                    Ingredients[i].SetActive(false);
+                    continue;
                 }
+                Ingredients[i].SetActive(false);
             }
             Ingredients[9].SetActive(true);
-            Set = true;
         }
         if (this.tag == "MeatFish05")
         {
-            if (Set == false)
+            for (int i = 0; i < 18; ++i)
             {
-                for (int i = 0; i < 18; ++i)
+                if (i == 10)
                 {
-                    Ingredients[i].SetActive(false);
+                    continue;
                 }
+                Ingredients[i].SetActive(false);
             }
             Ingredients[10].SetActive(true);
-            Set = true;
         }
         if (this.tag == "MeatFish06")
         {
-            if (Set == false)
+            for (int i = 0; i < 18; ++i)
             {
-                for (int i = 0; i < 18; ++i)
+                if (i == 11)
                 {
-                    Ingredients[i].SetActive(false);
+                    continue;
                 }
+                Ingredients[i].SetActive(false);
             }
             Ingredients[11].SetActive(true);
-            Set = true;
         }
         if (this.tag == "Others01")
         {
-            if (Set == false)
+            for (int i = 0; i < 18; ++i)
             {
-                for (int i = 0; i < 18; ++i)
+                if (i == 12)
                 {
-                    Ingredients[i].SetActive(false);
+                    continue;
                 }
+                Ingredients[i].SetActive(false);
             }
             Ingredients[12].SetActive(true);
-            Set = true;
         }
         if (this.tag == "Others02")
         {
-            if (Set == false)
+            for (int i = 0; i < 18; ++i)
             {
-                for (int i = 0; i < 18; ++i)
+                if (i == 13)
                 {
-                    Ingredients[i].SetActive(false);
+                    continue;
                 }
+                Ingredients[i].SetActive(false);
             }
             Ingredients[13].SetActive(true);
-            Set = true;
         }
         if (this.tag == "Others03")
         {
-            if (Set == false)
+            for (int i = 0; i < 18; ++i)
             {
-                for (int i = 0; i < 18; ++i)
+                if (i == 14)
                 {
-                    Ingredients[i].SetActive(false);
+                    continue;
                 }
+                Ingredients[i].SetActive(false);
             }
             Ingredients[14].SetActive(true);
-            Set = true;
         }
         if (this.tag == "Others04")
         {
-            if (Set == false)
+            for (int i = 0; i < 18; ++i)
             {
-                for (int i = 0; i < 18; ++i)
+                if (i == 15)
                 {
-                    Ingredients[i].SetActive(false);
+                    continue;
                 }
+                Ingredients[i].SetActive(false);
             }
             Ingredients[15].SetActive(true);
-            Set = true;
         }
         if (this.tag == "Others05")
         {
-            if (Set == false)
+            for (int i = 0; i < 18; ++i)
             {
-                for (int i = 0; i < 18; ++i)
+                if (i == 16)
                 {
-                    Ingredients[i].SetActive(false);
+                    continue;
                 }
+                Ingredients[i].SetActive(false);
             }
             Ingredients[16].SetActive(true);
-            Set = true;
         }
         if (this.tag == "Others06")
         {
-            if (Set == false)
+            for (int i = 0; i < 18; ++i)
             {
-                for (int i = 0; i < 18; ++i)
+                if (i == 17)
                 {
-                    Ingredients[i].SetActive(false);
+                    continue;
                 }
+                Ingredients[i].SetActive(false);
             }
             Ingredients[17].SetActive(true);
-            Set = true;
         }
     }
 

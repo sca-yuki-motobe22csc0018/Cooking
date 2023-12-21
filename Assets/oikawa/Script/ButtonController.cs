@@ -47,7 +47,7 @@ public class ButtonController : MonoBehaviour
     {
         startButton.transform.DOKill();
         startButton.transform.localScale = defaltStartButtonScale;
-        SceneManager.LoadScene("MainGame");
+        SceneManager.LoadScene("MainGameSelect");//ïœçXÇµÇ‹ÇµÇΩ ñ{ïî
     }
 
 
