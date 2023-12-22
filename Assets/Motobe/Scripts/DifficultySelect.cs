@@ -14,10 +14,12 @@ public class DifficultySelect : MonoBehaviour
     public float sizechange;
     public GameObject[] Explanation;
     public int thisdif;
+    public GameObject mushiOn;
+    public GameObject mushiOff;
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < 6; ++i)
+        for (int i = 0; i < 7; ++i)
         {
             Explanation[i].SetActive(false);
         }
@@ -25,6 +27,12 @@ public class DifficultySelect : MonoBehaviour
         button.onClick.AddListener(Click);
         big = false;
         Fade.scene = "Main";
+        Order.mushikui = false;
+        if (this.tag == "Mushi")
+        {
+            mushiOn.gameObject.SetActive(false);
+            mushiOff.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -38,6 +46,20 @@ public class DifficultySelect : MonoBehaviour
         else
         {
             this.gameObject.transform.localScale = new Vector3(1,1,1);
+        }
+        if (this.tag == "Mushi")
+        {
+            if (Order.mushikui==true)
+            {
+                mushiOn.SetActive(true);
+                mushiOff.SetActive(false);
+            }
+            else
+            {
+                mushiOn.SetActive(false);
+                mushiOff.SetActive(true);
+            }
+           
         }
     }
 
@@ -88,12 +110,24 @@ public class DifficultySelect : MonoBehaviour
             fade.SetActive(true);
             Fade.fadeout = true;
         }
+        else if (this.tag == "Mushi")
+        {
+            if (Order.mushikui == false)
+            {
+                Order.mushikui = true;
+            }
+            else
+            {
+                Order.mushikui = false;
+            }
+            
+        }
     }
 
     public void UP()
     {
         big = true;
-        for (int i = 0; i < 6; ++i)
+        for (int i = 0; i < 7; ++i)
         {
             Explanation[i].SetActive(false);
         }
