@@ -19,6 +19,9 @@ public class TimeGaugeColorChange : MonoBehaviour
     private float second;                       // これは残り時間
     private float target_Frame;                 //  ゲージの減る量
 
+    //追加します　本部
+    public GameObject fade;
+
     void Start()
     {
         image_TimeGauge = gameObject.GetComponent<Image>();
@@ -55,7 +58,9 @@ public class TimeGaugeColorChange : MonoBehaviour
         }
         if (second <= 0)
         {
-            SceneManager.LoadScene("Score");
+            //変更します　本部　SceneManager.LoadScene("Score");
+            fade.SetActive(true);
+            Fade.fadeout = true;
         }
     }
 }

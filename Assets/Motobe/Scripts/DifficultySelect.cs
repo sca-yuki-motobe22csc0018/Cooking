@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+
 
 public class DifficultySelect : MonoBehaviour
 {
     private Button button;
+    public GameObject fade;
     bool big;
     float sin;
     public float speedchange;
@@ -39,37 +40,38 @@ public class DifficultySelect : MonoBehaviour
         {
             ClearCount.ClearCountSet=3;
             ClearCount.timer=false;
-            SceneManager.LoadScene("Main");
+            fade.SetActive(true);
+            Fade.fadeout = true;
         }
         else if (this.tag == "normal")
         {
             ClearCount.ClearCountSet = 5;
             ClearCount.timer = false;
-            SceneManager.LoadScene("Main");
+            fade.SetActive(true);
+            Fade.fadeout = true;
         }
         else if (this.tag == "hard")
         {
             ClearCount.ClearCountSet = 8;
             ClearCount.timer = false;
-            SceneManager.LoadScene("Main");
+            fade.SetActive(true);
+            Fade.fadeout = true;
         }
         else if (this.tag == "veryhard")
         {
             ClearCount.ClearCountSet = 10;
             ClearCount.timer = true;
             TimeGaugeColorChange.target_Time=300;
-            SceneManager.LoadScene("Main");
+            fade.SetActive(true);
+            Fade.fadeout = true;
         }
         else if (this.tag == "hell")
         {
             ClearCount.ClearCountSet = 20;
             ClearCount.timer = true;
             TimeGaugeColorChange.target_Time = 180;
-            SceneManager.LoadScene("Main");
-        }
-        else if (this.tag == "regacy")
-        {
-            SceneManager.LoadScene("MainGame");
+            fade.SetActive(true);
+            Fade.fadeout = true;
         }
     }
 

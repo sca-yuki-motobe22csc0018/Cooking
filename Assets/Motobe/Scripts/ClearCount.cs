@@ -11,6 +11,8 @@ public class ClearCount : MonoBehaviour
     public static int ClearCountSet=1;
     public static bool timer;
     public GameObject Timer;
+    public GameObject fade;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +49,9 @@ public class ClearCount : MonoBehaviour
         
         if (score_num >= ClearCountSet)
         {
-            SceneManager.LoadScene("Score");
+            fade.SetActive(true);
+            Fade.fadeout = true;
+            Enemy.move = false;
         }
     }
 }

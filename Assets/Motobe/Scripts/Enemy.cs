@@ -9,12 +9,14 @@ public class Enemy : MonoBehaviour
     public RectTransform my;
     public GameObject cookbutton;
     public GameObject[] evaluation;
+    public static bool move;
     int x;
     // Start is called before the first frame update
     void Start()
     {
         change=false;
         x=0;
+        move = true;
         for (int i = 0; i < 13; ++i)
         {
             Food[i].SetActive(false);
@@ -28,6 +30,10 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (move == false)
+        {
+            x = 0;
+        }
         if (Order.miss == 2)
         {
             evaluation[3].SetActive(true);
@@ -40,11 +46,11 @@ public class Enemy : MonoBehaviour
         {
             evaluation[5].SetActive(true);
         }
-        my.position+= new Vector3(x,0,0);
+        my.position += new Vector3(x,0,0);
         if (Score.plus == true)
         {
             change=true;
-            x=-8;
+            
             if(cookbutton.tag== "Food01")
             {
                 Food[0].SetActive(true);
@@ -113,7 +119,7 @@ public class Enemy : MonoBehaviour
             {
                 evaluation[0].SetActive(true);
             }
-
+            x = -8;
         }
         if (my.position.x<-250)
         {
