@@ -59,6 +59,7 @@ public class TimeGaugeColorChange : MonoBehaviour
         if (second <= 0)
         {
             //変更します　本部　SceneManager.LoadScene("Score");
+            Fade.scene = "Score";
             fade.SetActive(true);
             Fade.fadeout = true;
         }

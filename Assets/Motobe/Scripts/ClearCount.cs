@@ -49,6 +49,7 @@ public class ClearCount : MonoBehaviour
         
         if (score_num >= ClearCountSet)
         {
+            Fade.scene = "Score";
             fade.SetActive(true);
             Fade.fadeout = true;
             Enemy.move = false;

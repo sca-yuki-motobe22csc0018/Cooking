@@ -10,16 +10,26 @@ public class SceneChange : MonoBehaviour
     private Button button;
     public GameObject setting;
     public GameObject fade;
+    bool big;
     // Start is called before the first frame update
     void Start()
     {
         button = GetComponent<Button>();
         button.onClick.AddListener(Click);
+        big = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (big == true)
+        {
+            this.gameObject.transform.localScale = new Vector3(1.2f, 1.2f, 1);
+        }
+        else
+        {
+            this.gameObject.transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 
     void Click()
@@ -41,5 +51,14 @@ public class SceneChange : MonoBehaviour
             setting.SetActive(false);
         }
         
+    }
+
+    public void UP()
+    {
+        big = true;
+    }
+    public void Down()
+    {
+        big = false;
     }
 }

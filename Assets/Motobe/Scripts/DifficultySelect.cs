@@ -12,9 +12,15 @@ public class DifficultySelect : MonoBehaviour
     float sin;
     public float speedchange;
     public float sizechange;
+    public GameObject[] Explanation;
+    public int thisdif;
     // Start is called before the first frame update
     void Start()
     {
+        for (int i = 0; i < 6; ++i)
+        {
+            Explanation[i].SetActive(false);
+        }
         button = GetComponent<Button>();
         button.onClick.AddListener(Click);
         big = false;
@@ -74,11 +80,24 @@ public class DifficultySelect : MonoBehaviour
             fade.SetActive(true);
             Fade.fadeout = true;
         }
+        else if (this.tag == "hell2")
+        {
+            ClearCount.ClearCountSet = 12;
+            ClearCount.timer = true;
+            TimeGaugeColorChange.target_Time = 60;
+            fade.SetActive(true);
+            Fade.fadeout = true;
+        }
     }
 
     public void UP()
     {
         big = true;
+        for (int i = 0; i < 6; ++i)
+        {
+            Explanation[i].SetActive(false);
+        }
+        Explanation[thisdif].SetActive(true);
     }
     public void Down()
     {

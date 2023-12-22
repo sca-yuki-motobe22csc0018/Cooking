@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 231973841}
   - component: {fileID: 231973840}
   - component: {fileID: 231973843}
+  - component: {fileID: 231973844}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Restart
@@ -258,6 +259,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   setting: {fileID: 0}
+  fade: {fileID: 1894700563}
+--- !u!114 &231973844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231973838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 231973843}
+          m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+          m_MethodName: UP
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 231973843}
+          m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+          m_MethodName: Down
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &302317816
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,6 +564,7 @@ GameObject:
   - component: {fileID: 648441674}
   - component: {fileID: 648441673}
   - component: {fileID: 648441676}
+  - component: {fileID: 648441677}
   m_Layer: 5
   m_Name: Title
   m_TagString: Title
@@ -639,6 +687,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   setting: {fileID: 0}
+  fade: {fileID: 1894700563}
+--- !u!114 &648441677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648441671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 648441676}
+          m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+          m_MethodName: UP
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 648441676}
+          m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+          m_MethodName: Down
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &742538214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -653,7 +747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5861714866060960655, guid: b825f1ce2ec085540834b9fa48596eec, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6353385951869222258, guid: b825f1ce2ec085540834b9fa48596eec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -716,6 +810,7 @@ GameObject:
   - component: {fileID: 824585512}
   - component: {fileID: 824585514}
   - component: {fileID: 824585513}
+  - component: {fileID: 824585515}
   m_Layer: 5
   m_Name: Clear!
   m_TagString: Untagged
@@ -784,6 +879,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824585511}
   m_CullTransparentMesh: 1
+--- !u!114 &824585515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824585511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88649cca79293df428af9948f9f37bc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedchange: 10
+  sizechange: 0.1
 --- !u!1 &980974215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,6 +1246,7 @@ GameObject:
   - component: {fileID: 1763358215}
   - component: {fileID: 1763358217}
   - component: {fileID: 1763358216}
+  - component: {fileID: 1763358218}
   m_Layer: 5
   m_Name: Faild...
   m_TagString: Untagged
@@ -1205,6 +1315,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763358214}
   m_CullTransparentMesh: 1
+--- !u!114 &1763358218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763358214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88649cca79293df428af9948f9f37bc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedchange: 2
+  sizechange: 0.1
 --- !u!1 &1786434759
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,6 +1604,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedchange: 8
   sizechange: -0.05
+--- !u!1 &1894700563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1775990804777693818, guid: b825f1ce2ec085540834b9fa48596eec, type: 3}
+  m_PrefabInstance: {fileID: 742538214}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2097626665
 GameObject:
   m_ObjectHideFlags: 0

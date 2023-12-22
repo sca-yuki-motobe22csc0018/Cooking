@@ -21,9 +21,16 @@ public class HellChange : MonoBehaviour
     public void UP()
     {
         a+=1;
-        if (a>10)
+        if (a==10)
         {
             hell.SetActive(true);
+            
+            if (this.tag == "hell"||this.tag=="hell2")
+            {
+                a = 0;
+                this.gameObject.SetActive(false);
+            }
+            
         }
     }
 }
