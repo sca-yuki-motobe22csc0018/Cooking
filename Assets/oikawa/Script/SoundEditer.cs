@@ -10,7 +10,6 @@ public class SoundEditer : MonoBehaviour
         // "AudioSource"コンポーネントを取得
         BGM_AudioSource = gameObject.GetComponent<AudioSource>();
         SE_AudioSource = gameObject.GetComponent<AudioSource>();
-
     }
 
     public void BGM_SoundSliderOnValueChange(float newSliderValue)

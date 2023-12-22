@@ -11,7 +11,7 @@ public class Fade : MonoBehaviour
     float fader;
     float a;
     public static bool fadeout;
-    public string scene;
+    public static string scene;
     // Start is called before the first frame update
     void Start()
     { 

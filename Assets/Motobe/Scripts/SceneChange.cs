@@ -9,6 +9,7 @@ public class SceneChange : MonoBehaviour
 {
     private Button button;
     public GameObject setting;
+    public GameObject fade;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,10 +26,16 @@ public class SceneChange : MonoBehaviour
     {
         if (this.tag == "Title")
         {
-            SceneManager.LoadScene("TitleScene");
+            fade.SetActive(true);
+            Fade.fadeout = true;
+            Fade.scene = "TitleScene";
+            //SceneManager.LoadScene("TitleScene");
         }else if (this.tag == "Restart")
         {
-            SceneManager.LoadScene("MainGameSelect");
+            fade.SetActive(true);
+            Fade.fadeout = true;
+            Fade.scene = "MainGameSelect";
+            //SceneManager.LoadScene("MainGameSelect");
         }else if (this.tag == "Del")
         {
             setting.SetActive(false);

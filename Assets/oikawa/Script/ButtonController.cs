@@ -20,6 +20,9 @@ public class ButtonController : MonoBehaviour
     [SerializeField] Button endButton;
     [SerializeField] Button titleButton;
 
+    //追加しました　本部
+    public GameObject fade;
+
 
     void Start()
     {
@@ -47,7 +50,13 @@ public class ButtonController : MonoBehaviour
     {
         startButton.transform.DOKill();
         startButton.transform.localScale = defaltStartButtonScale;
-        SceneManager.LoadScene("MainGameSelect");//変更しました 本部
+        //変更しました 本部
+        //SceneManager.LoadScene("MainGame");
+        Fade.scene = "MainGameSelect";
+        fade.SetActive(true);
+        Fade.fadeout = true;
+        
+
     }
 
 

@@ -18,6 +18,7 @@ public class DifficultySelect : MonoBehaviour
         button = GetComponent<Button>();
         button.onClick.AddListener(Click);
         big = false;
+        Fade.scene = "Main";
     }
 
     // Update is called once per frame
