@@ -51,6 +51,7 @@ TagManager:
   - regacy
   - hell2
   - Mushi
+  - MushiPlus
   layers:
   - Default
   - TransparentFX
