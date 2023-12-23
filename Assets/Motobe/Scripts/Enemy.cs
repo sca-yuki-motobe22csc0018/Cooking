@@ -119,11 +119,11 @@ public class Enemy : MonoBehaviour
             {
                 evaluation[0].SetActive(true);
             }
-            x = -8;
+            x = -12;
         }
         if (my.position.x<-250)
         {
-            x=8;
+            x=12;
             change=false;
             for (int i = 0; i < 13; ++i)
             {

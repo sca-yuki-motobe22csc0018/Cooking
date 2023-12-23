@@ -12,6 +12,7 @@ public class Order : MonoBehaviour
     float sin;
     public static int miss;
     public static bool mushikui;
+    public static int mushiplus=0;
 
     // Start is called before the first frame update
     void Start()
@@ -58,7 +59,7 @@ public class Order : MonoBehaviour
                 this.tag="Food01";
                 if (mushikui == true)
                 {
-                    int a = Random.Range(0, 6);
+                    int a = Random.Range(mushiplus, 6);
                     if (a <= 2)
                     {
                         order[num].SetActive(true);
@@ -86,7 +87,7 @@ public class Order : MonoBehaviour
                 this.tag = "Food02";
                 if (mushikui == true)
                 {
-                    int a = Random.Range(0, 6);
+                    int a = Random.Range(mushiplus, 6);
                     if (a <= 2)
                     {
                         order[1].SetActive(true);
@@ -114,7 +115,7 @@ public class Order : MonoBehaviour
                 this.tag = "Food03";
                 if (mushikui == true)
                 {
-                    int a = Random.Range(0, 6);
+                    int a = Random.Range(mushiplus, 6);
                     if (a <= 2)
                     {
                         order[num].SetActive(true);
@@ -142,7 +143,7 @@ public class Order : MonoBehaviour
                 this.tag = "Food04";
                 if (mushikui == true)
                 {
-                    int a = Random.Range(0, 6);
+                    int a = Random.Range(mushiplus, 6);
                     if (a <= 2)
                     {
                         order[num].SetActive(true);
@@ -170,7 +171,7 @@ public class Order : MonoBehaviour
                 this.tag = "Food05";
                 if (mushikui == true)
                 {
-                    int a = Random.Range(0, 6);
+                    int a = Random.Range(mushiplus, 6);
                     if (a <= 2)
                     {
                         order[num].SetActive(true);
@@ -198,7 +199,7 @@ public class Order : MonoBehaviour
                 this.tag = "Food06";
                 if (mushikui == true)
                 {
-                    int a = Random.Range(0, 6);
+                    int a = Random.Range(mushiplus, 6);
                     if (a <= 2)
                     {
                         order[num].SetActive(true);
@@ -226,7 +227,7 @@ public class Order : MonoBehaviour
                 this.tag = "Food07";
                 if (mushikui == true)
                 {
-                    int a = Random.Range(0, 6);
+                    int a = Random.Range(mushiplus, 6);
                     if (a <= 2)
                     {
                         order[num].SetActive(true);
@@ -254,7 +255,7 @@ public class Order : MonoBehaviour
                 this.tag = "Food08";
                 if (mushikui == true)
                 {
-                    int a = Random.Range(0, 6);
+                    int a = Random.Range(mushiplus, 6);
                     if (a <= 2)
                     {
                         order[num].SetActive(true);
@@ -282,7 +283,7 @@ public class Order : MonoBehaviour
                 this.tag = "Food09";
                 if (mushikui == true)
                 {
-                    int a = Random.Range(0, 6);
+                    int a = Random.Range(mushiplus, 6);
                     if (a <= 2)
                     {
                         order[num].SetActive(true);
@@ -310,7 +311,7 @@ public class Order : MonoBehaviour
                 this.tag = "Food10";
                 if (mushikui == true)
                 {
-                    int a = Random.Range(0, 6);
+                    int a = Random.Range(mushiplus, 6);
                     if (a <= 2)
                     {
                         order[num].SetActive(true);
@@ -338,7 +339,7 @@ public class Order : MonoBehaviour
                 this.tag = "Food11";
                 if (mushikui == true)
                 {
-                    int a = Random.Range(0, 6);
+                    int a = Random.Range(mushiplus, 6);
                     if (a <= 2)
                     {
                         order[num].SetActive(true);
@@ -366,7 +367,7 @@ public class Order : MonoBehaviour
                 this.tag = "Food12";
                 if (mushikui == true)
                 {
-                    int a = Random.Range(0, 6);
+                    int a = Random.Range(mushiplus, 6);
                     if (a <= 2)
                     {
                         order[num].SetActive(true);
@@ -394,7 +395,7 @@ public class Order : MonoBehaviour
                 this.tag = "Food13";
                 if (mushikui == true)
                 {
-                    int a = Random.Range(0, 6);
+                    int a = Random.Range(mushiplus, 6);
                     if (a <= 2)
                     {
                         order[num].SetActive(true);

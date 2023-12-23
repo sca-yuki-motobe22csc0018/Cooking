@@ -6272,7 +6272,7 @@ GameObject:
   - component: {fileID: 283493832}
   m_Layer: 5
   m_Name: Order05b
-  m_TagString: Vegetable05
+  m_TagString: Food05
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13133,7 +13133,7 @@ GameObject:
   - component: {fileID: 532505160}
   m_Layer: 5
   m_Name: Order05c
-  m_TagString: Vegetable05
+  m_TagString: Food05
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46099,7 +46099,7 @@ GameObject:
   - component: {fileID: 1902574119}
   m_Layer: 5
   m_Name: Order05a
-  m_TagString: Vegetable05
+  m_TagString: Food05
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -15,6 +15,7 @@ public class DifficultySelect : MonoBehaviour
     public GameObject[] Explanation;
     public int thisdif;
     public GameObject mushiOn;
+    public GameObject mushiPlusOn;
     public GameObject mushiOff;
     // Start is called before the first frame update
     void Start()
@@ -28,9 +29,10 @@ public class DifficultySelect : MonoBehaviour
         big = false;
         Fade.scene = "Main";
         Order.mushikui = false;
-        if (this.tag == "Mushi")
+        if (this.tag == "Mushi"||this.tag=="MushiPlus")
         {
             mushiOn.gameObject.SetActive(false);
+            mushiPlusOn.gameObject.SetActive(false);
             mushiOff.gameObject.SetActive(false);
         }
     }
@@ -51,12 +53,12 @@ public class DifficultySelect : MonoBehaviour
         {
             if (Order.mushikui==true)
             {
-                mushiOn.SetActive(true);
-                mushiOff.SetActive(false);
+                
             }
             else
             {
                 mushiOn.SetActive(false);
+                mushiPlusOn.SetActive(false);
                 mushiOff.SetActive(true);
             }
            
@@ -104,7 +106,7 @@ public class DifficultySelect : MonoBehaviour
         }
         else if (this.tag == "hell2")
         {
-            ClearCount.ClearCountSet = 12;
+            ClearCount.ClearCountSet = 10;
             ClearCount.timer = true;
             TimeGaugeColorChange.target_Time = 60;
             fade.SetActive(true);
@@ -115,12 +117,33 @@ public class DifficultySelect : MonoBehaviour
             if (Order.mushikui == false)
             {
                 Order.mushikui = true;
+                Order.mushiplus = 0;
+                mushiOn.SetActive(true);
+                mushiPlusOn.SetActive(false);
+                mushiOff.SetActive(false);
+            }
+            else
+            {
+                Order.mushikui = false;
+
+            }
+            
+        }
+        else if (this.tag == "MushiPlus")
+        {
+            if (Order.mushikui == false)
+            {
+                Order.mushikui = true;
+                Order.mushiplus=3;
+                mushiOn.SetActive(false);
+                mushiPlusOn.SetActive(true);
+                mushiOff.SetActive(false);
             }
             else
             {
                 Order.mushikui = false;
             }
-            
+
         }
     }
 
