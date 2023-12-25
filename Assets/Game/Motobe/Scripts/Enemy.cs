@@ -6,7 +6,6 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] public GameObject[] Food;
     public static bool change;
-    public RectTransform my;
     public GameObject cookbutton;
     public GameObject[] evaluation;
     public static bool move;
@@ -30,6 +29,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(x);
         if (move == false)
         {
             x = 0;
@@ -46,7 +46,7 @@ public class Enemy : MonoBehaviour
         {
             evaluation[5].SetActive(true);
         }
-        my.position += new Vector3(x,0,0);
+        this.transform.position += new Vector3(x,0,0);
         if (Score.plus == true)
         {
             change=true;
@@ -119,11 +119,11 @@ public class Enemy : MonoBehaviour
             {
                 evaluation[0].SetActive(true);
             }
-            x = -12;
+            x = -6;
         }
-        if (my.position.x<-250)
+        if (this.transform.position.x<-150)
         {
-            x=12;
+            x=6;
             change=false;
             for (int i = 0; i < 13; ++i)
             {
@@ -135,7 +135,7 @@ public class Enemy : MonoBehaviour
                 evaluation[i].SetActive(false);
             }
         }
-        if (my.position.x > 224&&change==false)
+        if (this.transform.position.x > -80&&change==false)
         {
             x=0;
         }

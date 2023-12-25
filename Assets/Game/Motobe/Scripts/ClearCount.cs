@@ -8,7 +8,7 @@ public class ClearCount : MonoBehaviour
 {
     public GameObject score_object = null; // Textオブジェクト
     public static int score_num = 0; // スコア変数
-    public static int ClearCountSet=1;
+    public static int ClearCountSet=2;
     public static bool timer;
     public GameObject Timer;
     public GameObject fade;

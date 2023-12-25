@@ -20,7 +20,7 @@ public class DifficultySelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < 7; ++i)
+        for (int i = 0; i < 8; ++i)
         {
             Explanation[i].SetActive(false);
         }
@@ -150,7 +150,7 @@ public class DifficultySelect : MonoBehaviour
     public void UP()
     {
         big = true;
-        for (int i = 0; i < 7; ++i)
+        for (int i = 0; i < 8; ++i)
         {
             Explanation[i].SetActive(false);
         }

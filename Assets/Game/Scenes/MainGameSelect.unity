@@ -324,6 +324,7 @@ MonoBehaviour:
   - {fileID: 321311851}
   - {fileID: 1335762980}
   - {fileID: 1943036011}
+  - {fileID: 576353372}
   thisdif: 6
   mushiOn: {fileID: 1741147044}
   mushiPlusOn: {fileID: 1047423146}
@@ -807,6 +808,7 @@ MonoBehaviour:
   - {fileID: 321311851}
   - {fileID: 1335762980}
   - {fileID: 1943036011}
+  - {fileID: 576353372}
   thisdif: 2
   mushiOn: {fileID: 0}
   mushiPlusOn: {fileID: 0}
@@ -932,6 +934,89 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 321311851}
   m_CullTransparentMesh: 1
+--- !u!1 &489577124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 489577126}
+  - component: {fileID: 489577125}
+  m_Layer: 0
+  m_Name: UICamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!20 &489577125
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489577124}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &489577126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489577124}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.751196, y: -11.708399, z: 132.97356}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &547825558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1187,7 +1272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &663213577
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1195,7 +1280,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663213576}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1276,7 +1361,8 @@ MonoBehaviour:
   - {fileID: 321311851}
   - {fileID: 1335762980}
   - {fileID: 1943036011}
-  thisdif: 6
+  - {fileID: 576353372}
+  thisdif: 7
   mushiOn: {fileID: 1741147044}
   mushiPlusOn: {fileID: 1047423146}
   mushiOff: {fileID: 1002931082}
@@ -1747,6 +1833,7 @@ MonoBehaviour:
   - {fileID: 321311851}
   - {fileID: 1335762980}
   - {fileID: 1943036011}
+  - {fileID: 576353372}
   thisdif: 3
   mushiOn: {fileID: 0}
   mushiPlusOn: {fileID: 0}
@@ -2012,6 +2099,7 @@ MonoBehaviour:
   - {fileID: 321311851}
   - {fileID: 1335762980}
   - {fileID: 1943036011}
+  - {fileID: 576353372}
   thisdif: 0
   mushiOn: {fileID: 0}
   mushiPlusOn: {fileID: 0}
@@ -2452,6 +2540,7 @@ MonoBehaviour:
   - {fileID: 321311851}
   - {fileID: 1335762980}
   - {fileID: 1943036011}
+  - {fileID: 576353372}
   thisdif: 5
   mushiOn: {fileID: 0}
   mushiPlusOn: {fileID: 0}
@@ -3034,6 +3123,7 @@ MonoBehaviour:
   - {fileID: 321311851}
   - {fileID: 1335762980}
   - {fileID: 1943036011}
+  - {fileID: 576353372}
   thisdif: 1
   mushiOn: {fileID: 0}
   mushiPlusOn: {fileID: 0}
@@ -3920,8 +4010,8 @@ Canvas:
   m_GameObject: {fileID: 1777522376}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 489577125}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -3949,14 +4039,14 @@ RectTransform:
   - {fileID: 1898744235}
   - {fileID: 1430385883}
   - {fileID: 1777311955}
-  - {fileID: 107840554}
-  - {fileID: 663213577}
   - {fileID: 754858070}
   - {fileID: 1228104184}
   - {fileID: 232568752}
   - {fileID: 743635456}
   - {fileID: 2037919090}
   - {fileID: 978079546}
+  - {fileID: 107840554}
+  - {fileID: 663213577}
   - {fileID: 1633602195}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4497,6 +4587,7 @@ MonoBehaviour:
   - {fileID: 321311851}
   - {fileID: 1335762980}
   - {fileID: 1943036011}
+  - {fileID: 576353372}
   thisdif: 4
   mushiOn: {fileID: 0}
   mushiPlusOn: {fileID: 0}
@@ -4722,3 +4813,4 @@ SceneRoots:
   - {fileID: 1495113722}
   - {fileID: 1777522380}
   - {fileID: 1616863796}
+  - {fileID: 489577126}
