@@ -9,7 +9,8 @@ public class Enemy : MonoBehaviour
     public GameObject cookbutton;
     public GameObject[] evaluation;
     public static bool move;
-    int x;
+    public float speed;
+    float x;
     // Start is called before the first frame update
     void Start()
     {
@@ -119,11 +120,11 @@ public class Enemy : MonoBehaviour
             {
                 evaluation[0].SetActive(true);
             }
-            x = -6;
+            x = -speed;
         }
         if (this.transform.position.x<-150)
         {
-            x=6;
+            x=speed;
             change=false;
             for (int i = 0; i < 13; ++i)
             {

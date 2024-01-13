@@ -34,6 +34,7 @@ public class SceneChange : MonoBehaviour
 
     void Click()
     {
+        big = false;
         if (this.tag == "Title")
         {
             fade.SetActive(true);
