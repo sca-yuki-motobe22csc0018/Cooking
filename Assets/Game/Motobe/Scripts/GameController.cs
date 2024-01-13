@@ -8,12 +8,14 @@ public class GameController : MonoBehaviour
     [SerializeField] public static string Order;
     public GameObject[] Dish;
     public static int DishSelect;
+    public GameObject fade;
 
     // Start is called before the first frame update
     void Start()
     {
         Food=null;
         Order=null;
+        fade.gameObject.SetActive(true);
     }
 
     // Update is called once per frame

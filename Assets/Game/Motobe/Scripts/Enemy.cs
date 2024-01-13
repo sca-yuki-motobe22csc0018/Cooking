@@ -122,7 +122,7 @@ public class Enemy : MonoBehaviour
             }
             x = -speed;
         }
-        if (this.transform.position.x<-150)
+        if (this.transform.position.x<-15)
         {
             x=speed;
             change=false;
@@ -136,7 +136,7 @@ public class Enemy : MonoBehaviour
                 evaluation[i].SetActive(false);
             }
         }
-        if (this.transform.position.x > -80&&change==false)
+        if (this.transform.position.x > -6.8f&&change==false)
         {
             x=0;
         }
