@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GC : MonoBehaviour
 {
-    public GameObject Pt;
+    public GameObject Pt1;
+    public GameObject Pt2;
     // 位置座標
     private Vector3 position;
     // スクリーン座標をワールド座標に変換した位置座標
@@ -28,8 +29,10 @@ public class GC : MonoBehaviour
             // マウス位置座標をスクリーン座標からワールド座標に変換する
             screenToWorldPointPosition = Camera.main.ScreenToWorldPoint(position);
             // ワールド座標に変換されたマウス座標を代入
-            Pt.transform.position = screenToWorldPointPosition;
-            Instantiate(Pt);
+            Pt1.transform.position = screenToWorldPointPosition;
+            Pt2.transform.position = screenToWorldPointPosition;
+            Instantiate(Pt1);
+            Instantiate(Pt2);
         }
     }
 }

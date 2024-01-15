@@ -17,6 +17,8 @@ public class DishButton : MonoBehaviour
     private bool Set;
     public static bool set;
     bool delset;
+    public GameObject Pt1;
+    public GameObject Pt2;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,7 @@ public class DishButton : MonoBehaviour
             Ingredients[i].SetActive(false);
         }
         this.tag= "Untagged";
+        
     }
 
     // Update is called once per frame
@@ -51,6 +54,10 @@ public class DishButton : MonoBehaviour
             if (set==true)
             {
                 this.tag = Ingredient;
+                Pt1.transform.position = this.transform.position;
+                Pt2.transform.position = this.transform.position;
+                Instantiate(Pt1);
+                Instantiate(Pt2);
                 set = false;    
             }
         }

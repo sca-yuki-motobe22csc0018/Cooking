@@ -1081,6 +1081,7 @@ GameObject:
   - component: {fileID: 1504100809}
   - component: {fileID: 1504100808}
   - component: {fileID: 1504100811}
+  - component: {fileID: 1504100812}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1151,6 +1152,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fade: {fileID: 742538216}
+--- !u!114 &1504100812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504100807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a155968656356b14784185dbc12203e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pt1: {fileID: 7295846796279815470, guid: 6c6f39ca95befa84ca081d91813226fe, type: 3}
+  Pt2: {fileID: 1930610288557424540, guid: d035b001913297947818d491ef7c738c, type: 3}
 --- !u!1 &1646678742
 GameObject:
   m_ObjectHideFlags: 0
