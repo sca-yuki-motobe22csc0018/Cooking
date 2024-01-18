@@ -17,9 +17,11 @@ public class DifficultySelect : MonoBehaviour
     public GameObject mushiOn;
     public GameObject mushiPlusOn;
     public GameObject mushiOff;
+    public static int dif=0;
     // Start is called before the first frame update
     void Start()
     {
+        dif=0;
         for (int i = 0; i < 8; ++i)
         {
             Explanation[i].SetActive(false);
@@ -69,6 +71,7 @@ public class DifficultySelect : MonoBehaviour
     {
         if (this.tag == "easy")
         {
+            dif=0;
             ClearCount.ClearCountSet=3;
             ClearCount.timer=false;
             fade.SetActive(true);
@@ -76,6 +79,7 @@ public class DifficultySelect : MonoBehaviour
         }
         else if (this.tag == "normal")
         {
+            dif=1;
             ClearCount.ClearCountSet = 5;
             ClearCount.timer = false;
             fade.SetActive(true);
@@ -83,6 +87,7 @@ public class DifficultySelect : MonoBehaviour
         }
         else if (this.tag == "hard")
         {
+            dif=2;
             ClearCount.ClearCountSet = 8;
             ClearCount.timer = false;
             fade.SetActive(true);
@@ -90,6 +95,7 @@ public class DifficultySelect : MonoBehaviour
         }
         else if (this.tag == "veryhard")
         {
+            dif=3;
             ClearCount.ClearCountSet = 10;
             ClearCount.timer = true;
             TimeGaugeColorChange.target_Time=300;
@@ -98,6 +104,7 @@ public class DifficultySelect : MonoBehaviour
         }
         else if (this.tag == "hell")
         {
+            dif=4;
             ClearCount.ClearCountSet = 20;
             ClearCount.timer = true;
             TimeGaugeColorChange.target_Time = 180;
@@ -106,6 +113,7 @@ public class DifficultySelect : MonoBehaviour
         }
         else if (this.tag == "hell2")
         {
+            dif=5;
             ClearCount.ClearCountSet = 10;
             ClearCount.timer = true;
             TimeGaugeColorChange.target_Time = 60;

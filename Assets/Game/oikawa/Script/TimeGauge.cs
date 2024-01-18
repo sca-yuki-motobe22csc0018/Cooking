@@ -34,6 +34,7 @@ public class TimeGaugeColorChange : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(target_Time);
         //  c‚èŠÔ‚ª–Ú•WŠÔ‚æ‚è¬‚³‚¢‚ÉÀs
         if (second <= target_Time)
         {

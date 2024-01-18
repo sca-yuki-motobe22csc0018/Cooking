@@ -52,6 +52,7 @@ TagManager:
   - hell2
   - Mushi
   - MushiPlus
+  - Select
   layers:
   - Default
   - TransparentFX

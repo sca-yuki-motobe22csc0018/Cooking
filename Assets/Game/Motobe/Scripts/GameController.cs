@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour
     public GameObject[] Dish;
     public static int DishSelect;
     public GameObject fade;
+    float timer;
+    public static int TimeSet;
 
     // Start is called before the first frame update
     void Start()
@@ -16,11 +18,19 @@ public class GameController : MonoBehaviour
         Food=null;
         Order=null;
         fade.gameObject.SetActive(true);
+        timer=0;
+        TimeSet=0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        timer+=Time.deltaTime;
+        if (timer > TimeSet + 1)
+        {
+            TimeSet+=1;
+        }
+        Debug.Log(TimeSet);
         //Debug.Log("GameController.Food="+Food);
         if (DishSelect == 1)
         {

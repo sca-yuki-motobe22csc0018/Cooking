@@ -45,9 +45,16 @@ public class SceneChange : MonoBehaviour
         {
             fade.SetActive(true);
             Fade.fadeout = true;
-            Fade.scene = "MainGameSelect";
+            Fade.scene = "Main";
             //SceneManager.LoadScene("MainGameSelect");
-        }else if (this.tag == "Del")
+        }
+        else if (this.tag == "Select")
+        {
+            fade.SetActive(true);
+            Fade.fadeout = true;
+            Fade.scene = "MainGameSelect";
+        }
+        else if (this.tag == "Del")
         {
             setting.SetActive(false);
         }
