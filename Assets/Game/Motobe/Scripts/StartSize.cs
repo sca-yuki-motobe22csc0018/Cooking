@@ -9,6 +9,7 @@ public class StartSize : MonoBehaviour
     float size;
     float speed;
     public GameObject next;
+    
     // Start is called before the first frame update
     void Start()
     {

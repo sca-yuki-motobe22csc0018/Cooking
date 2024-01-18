@@ -114,7 +114,7 @@ public class DifficultySelect : MonoBehaviour
         else if (this.tag == "hell2")
         {
             dif=5;
-            ClearCount.ClearCountSet = 10;
+            ClearCount.ClearCountSet = 12;
             ClearCount.timer = true;
             TimeGaugeColorChange.target_Time = 60;
             fade.SetActive(true);
