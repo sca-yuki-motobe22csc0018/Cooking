@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class DifficultySelect : MonoBehaviour
 {
     private Button button;
-    public GameObject fade;
+    public GameObject Confirmation;
     bool big;
     float sin;
     public float speedchange;
@@ -74,24 +74,28 @@ public class DifficultySelect : MonoBehaviour
             dif=0;
             ClearCount.ClearCountSet=3;
             ClearCount.timer=false;
-            fade.SetActive(true);
-            Fade.fadeout = true;
+            confirmation.dif=1;
+            Confirmation.SetActive(true);
+            //Fade.fadeout = true;
+
         }
         else if (this.tag == "normal")
         {
             dif=1;
             ClearCount.ClearCountSet = 5;
             ClearCount.timer = false;
-            fade.SetActive(true);
-            Fade.fadeout = true;
+            confirmation.dif =2;
+            Confirmation.SetActive(true);
+            //Fade.fadeout = true;
         }
         else if (this.tag == "hard")
         {
             dif=2;
             ClearCount.ClearCountSet = 8;
             ClearCount.timer = false;
-            fade.SetActive(true);
-            Fade.fadeout = true;
+            confirmation.dif =3;
+            Confirmation.SetActive(true);
+            //Fade.fadeout = true;
         }
         else if (this.tag == "veryhard")
         {
@@ -99,8 +103,9 @@ public class DifficultySelect : MonoBehaviour
             ClearCount.ClearCountSet = 10;
             ClearCount.timer = true;
             TimeGaugeColorChange.target_Time=300;
-            fade.SetActive(true);
-            Fade.fadeout = true;
+            confirmation.dif =4;
+            Confirmation.SetActive(true);
+            //Fade.fadeout = true;
         }
         else if (this.tag == "hell")
         {
@@ -108,8 +113,9 @@ public class DifficultySelect : MonoBehaviour
             ClearCount.ClearCountSet = 20;
             ClearCount.timer = true;
             TimeGaugeColorChange.target_Time = 180;
-            fade.SetActive(true);
-            Fade.fadeout = true;
+            confirmation.dif =5;
+            Confirmation.SetActive(true);
+            //Fade.fadeout = true;
         }
         else if (this.tag == "hell2")
         {
@@ -117,8 +123,9 @@ public class DifficultySelect : MonoBehaviour
             ClearCount.ClearCountSet = 12;
             ClearCount.timer = true;
             TimeGaugeColorChange.target_Time = 60;
-            fade.SetActive(true);
-            Fade.fadeout = true;
+            confirmation.dif =6;
+            Confirmation.SetActive(true);
+            //Fade.fadeout = true;
         }
         else if (this.tag == "Mushi")
         {

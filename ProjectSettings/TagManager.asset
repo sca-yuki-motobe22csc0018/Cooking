@@ -54,6 +54,8 @@ TagManager:
   - MushiPlus
   - Select
   - Enemy
+  - Start
+  - Back
   layers:
   - Default
   - TransparentFX
