@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour
 {
     float cos;
+    public Sprite[] skin;
+    public Image me;
     // Start is called before the first frame update
     void Start()
     {

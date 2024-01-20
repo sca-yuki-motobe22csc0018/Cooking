@@ -140,7 +140,7 @@ public class Enemy : MonoBehaviour
                 evaluation[i].SetActive(false);
             }
             int a=Random.Range(0,6);
-            me.sprite=enemies[1];
+            me.sprite=enemies[a];
         }
         if (this.transform.position.x > -6.8f&&change==false)
         {

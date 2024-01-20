@@ -14899,6 +14899,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cb5560a2b32df740a5ced4f1fa8d6ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skin:
+  - {fileID: 21300000, guid: a54b0aa3d9e480340920fc8801eac289, type: 3}
+  - {fileID: 21300000, guid: cc82f8cee0c949441b1e303343654beb, type: 3}
+  - {fileID: 21300000, guid: 4330e2f653fc01b4da0b33cdae585b7e, type: 3}
+  - {fileID: 21300000, guid: 51195408c5e13584ab919378f2393448, type: 3}
+  - {fileID: 21300000, guid: cd4ca7462e490c74c983f2cedcc48442, type: 3}
+  me: {fileID: 593960376}
 --- !u!114 &593960376
 MonoBehaviour:
   m_ObjectHideFlags: 0
