@@ -9,6 +9,7 @@ public class FadeSet : MonoBehaviour
     void Start()
     {
         fade.SetActive(true);
+        Board.open=false;
     }
 
     // Update is called once per frame

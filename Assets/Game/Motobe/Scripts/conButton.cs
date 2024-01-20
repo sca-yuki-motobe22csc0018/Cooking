@@ -8,6 +8,7 @@ public class conButton : MonoBehaviour
     private Button button;
     public GameObject con;
     public GameObject fade;
+    public GameObject board;
     bool big;
     float sin;
     public float speedchange;
@@ -38,9 +39,8 @@ public class conButton : MonoBehaviour
     {
         if (this.tag == "Start")
         {
-            fade.SetActive(true);
-            Fade.fadeout = true;
-
+            board.SetActive(true);
+            Board.open=true;
         }
         if (this.tag == "Back")
         {
