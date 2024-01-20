@@ -13,9 +13,11 @@ public class IngredientButton : MonoBehaviour
     float sin;
     public float speedchange;
     public float sizechange;
+    public static bool start;
 
     void Start()
     {
+        start=false;
         button = GetComponent<Button>();
         button.onClick.AddListener(Click);
         select=false;
@@ -38,9 +40,9 @@ public class IngredientButton : MonoBehaviour
         {
             this.gameObject.transform.localScale=new Vector3(1.2f+sin*sizechange,1.2f+sin*sizechange, 1);
         }
-        else
+        else if(start==true)
         {
-            //this.gameObject.transform.localScale = new Vector3(1, 1, 1);
+            this.gameObject.transform.localScale = new Vector3(1, 1, 1);
         }
     }
 

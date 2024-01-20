@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour
         {
             TimeSet+=1;
         }
-        Debug.Log(TimeSet);
+        //Debug.Log(TimeSet);
         //Debug.Log("GameController.Food="+Food);
         if (DishSelect == 1)
         {

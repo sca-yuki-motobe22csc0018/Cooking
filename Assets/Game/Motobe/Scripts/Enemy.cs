@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
         {
             evaluation[i].SetActive(false);
         }
+        IngredientButton.start=true;
     }
 
     // Update is called once per frame
