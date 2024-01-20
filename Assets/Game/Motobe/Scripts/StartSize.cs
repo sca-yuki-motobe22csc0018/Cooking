@@ -15,7 +15,7 @@ public class StartSize : MonoBehaviour
     {
         maxSize = 1.0f;
         size = 0;
-        if(next != null)
+        if(next != null&&next.gameObject.tag!="Enemy")
         next.SetActive(false);
         speed = 0.1f;
     }

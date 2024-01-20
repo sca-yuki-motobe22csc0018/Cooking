@@ -40,7 +40,7 @@ public class IngredientButton : MonoBehaviour
         {
             this.gameObject.transform.localScale=new Vector3(1.2f+sin*sizechange,1.2f+sin*sizechange, 1);
         }
-        else if(start==true)
+        else if(start==true&&big==false)
         {
             this.gameObject.transform.localScale = new Vector3(1, 1, 1);
         }

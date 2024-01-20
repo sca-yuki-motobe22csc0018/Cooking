@@ -53,6 +53,7 @@ TagManager:
   - Mushi
   - MushiPlus
   - Select
+  - Enemy
   layers:
   - Default
   - TransparentFX

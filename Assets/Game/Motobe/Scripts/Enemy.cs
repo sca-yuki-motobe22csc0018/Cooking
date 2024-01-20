@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Enemy : MonoBehaviour
     public GameObject[] evaluation;
     public static bool move;
     public float speed;
+    public Sprite[] enemies;
+    public Image me;
     float x;
     // Start is called before the first frame update
     void Start()
@@ -136,6 +139,8 @@ public class Enemy : MonoBehaviour
             {
                 evaluation[i].SetActive(false);
             }
+            int a=Random.Range(0,6);
+            me.sprite=enemies[1];
         }
         if (this.transform.position.x > -6.8f&&change==false)
         {
