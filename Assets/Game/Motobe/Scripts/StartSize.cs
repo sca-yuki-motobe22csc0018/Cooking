@@ -9,13 +9,12 @@ public class StartSize : MonoBehaviour
     float size;
     float speed;
     public GameObject next;
-    
     // Start is called before the first frame update
     void Start()
     {
         maxSize = 1.0f;
         size = 0;
-        if(next != null&&next.gameObject.tag!="Enemy")
+        if(next != null)
         next.SetActive(false);
         speed = 0.1f;
     }
@@ -28,10 +27,9 @@ public class StartSize : MonoBehaviour
             this.gameObject.transform.localScale = new Vector3(size, size, 0);
             size += speed;
         }
-        if (next != null)
+        if (size >= maxSize)
         {
-            
-            if (size >= maxSize)
+            if (next != null)
             {
                 next.SetActive(true);
             }

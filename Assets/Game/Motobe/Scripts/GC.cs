@@ -6,6 +6,8 @@ public class GC : MonoBehaviour
 {
     public GameObject Pt1;
     public GameObject Pt2;
+    public GameObject Pt3;
+    public GameObject Pt4;
     // 位置座標
     private Vector3 position;
     // スクリーン座標をワールド座標に変換した位置座標
@@ -31,8 +33,12 @@ public class GC : MonoBehaviour
             // ワールド座標に変換されたマウス座標を代入
             Pt1.transform.position = screenToWorldPointPosition;
             Pt2.transform.position = screenToWorldPointPosition;
+            Pt3.transform.position = screenToWorldPointPosition;
+            Pt4.transform.position = screenToWorldPointPosition;
             Instantiate(Pt1);
             Instantiate(Pt2);
+            Instantiate(Pt3);
+            Instantiate(Pt4);
         }
     }
 }
