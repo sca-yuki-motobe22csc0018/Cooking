@@ -9,6 +9,7 @@ public class conButton : MonoBehaviour
     public GameObject con;
     public GameObject board;
     public GameObject back;
+    public GameObject[] Explanation;
     bool big;
     float sin;
     public float speedchange;
@@ -46,6 +47,10 @@ public class conButton : MonoBehaviour
         }
         if (this.tag == "Back")
         {
+            for (int i = 0; i < 8; ++i)
+            {
+                Explanation[i].SetActive(false);
+            }
             con.SetActive(false);
         }
     }

@@ -23,7 +23,6 @@ public class Fade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(a);
         fader += a;
         Color color = gameObject.GetComponent<Image>().color;
         gameObject.GetComponent<Image>().color = new Color(0, 0, 0, fader);

@@ -40,6 +40,7 @@ public class submissionButton : MonoBehaviour
         {
             Score.min = true;
             CookingButton.finish = true;
+            
         }
     }
 }

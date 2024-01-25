@@ -39,6 +39,7 @@ public class Score : MonoBehaviour
             plus = false;
             Order.miss=1;
             ClearCount.score_num+=1;
+            PlayerMove.skinNum=1;
         }
         if (min == true)
         {

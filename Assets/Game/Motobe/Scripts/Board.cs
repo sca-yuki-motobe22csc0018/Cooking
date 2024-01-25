@@ -23,8 +23,8 @@ public class Board : MonoBehaviour
     {
         if (open == true)
         {
-            move();
             open = false;
+            move();
         }
     }
 
@@ -47,15 +47,11 @@ public class Board : MonoBehaviour
             .AppendInterval(0.1f)
             .AppendCallback(() => Plays())
             .Join(rec.DOAnchorPosY(-1500.0f, 0.5f));
-            
     }
 
     void Plays()
     {
-        Debug.Log("Play");
-        Fade.scene = "Main";
         fade.SetActive(true);
         Fade.fadeout = true;
-        //this.gameObject.SetActive(false);
     }
 }

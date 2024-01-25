@@ -12,6 +12,9 @@ public class TimeGaugeColorChange : MonoBehaviour
     [Range(0, 100)] public float time = 100;
     private Image image_TimeGauge;
     private float time_ratio;
+    public GameObject back;
+    public static bool tgEnd;
+
 
 
     // 変えます　本部[SerializeField] private float target_Time; //  目標タイム(何秒でゲージを変化させたいか)
@@ -24,6 +27,7 @@ public class TimeGaugeColorChange : MonoBehaviour
 
     void Start()
     {
+        tgEnd=false;
         image_TimeGauge = gameObject.GetComponent<Image>();
 
         //  ここで一秒にどのくらいゲージを減らすか計算
@@ -61,8 +65,12 @@ public class TimeGaugeColorChange : MonoBehaviour
         {
             //変更します　本部　SceneManager.LoadScene("Score");
             Fade.scene = "Score";
-            fade.SetActive(true);
-            Fade.fadeout = true;
+            back.SetActive(true);
+            if (tgEnd == false)
+            {
+                Board.open = true;
+                tgEnd=true;
+            }
         }
     }
 }

@@ -42,14 +42,17 @@ public class Enemy : MonoBehaviour
         if (Order.miss == 2)
         {
             evaluation[3].SetActive(true);
+            PlayerMove.skinNum = 3;
         }
         if (Order.miss == 3)
         {
             evaluation[4].SetActive(true);
+            PlayerMove.skinNum=4;
         }
-        if (Order.miss == 4)
+        if (Order.miss >= 4)
         {
             evaluation[5].SetActive(true);
+            PlayerMove.skinNum = 4;
         }
         this.transform.position += new Vector3(x,0,0);
         if (Score.plus == true)

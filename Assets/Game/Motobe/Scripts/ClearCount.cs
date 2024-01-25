@@ -10,12 +10,16 @@ public class ClearCount : MonoBehaviour
     public static int score_num = 0; // ƒXƒRƒA•Ï”
     public static int ClearCountSet=2;
     public static bool timer;
+    public static bool ccEnd;
     public GameObject Timer;
     public GameObject fade;
+    public GameObject back;
 
     // Start is called before the first frame update
     void Start()
     {
+        ccEnd=false;
+        back.SetActive(false);
         score_num = 0;
         if (timer == true)
         {
@@ -50,9 +54,13 @@ public class ClearCount : MonoBehaviour
         if (score_num >= ClearCountSet)
         {
             Fade.scene = "Score";
-            fade.SetActive(true);
-            Fade.fadeout = true;
+            back.SetActive(true);
             Enemy.move = false;
+            if (ccEnd == false)
+            {
+                ccEnd=true;
+                Board.open = true;
+            }
         }
     }
 }
