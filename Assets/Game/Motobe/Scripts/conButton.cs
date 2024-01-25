@@ -7,8 +7,8 @@ public class conButton : MonoBehaviour
 {
     private Button button;
     public GameObject con;
-    public GameObject fade;
     public GameObject board;
+    public GameObject back;
     bool big;
     float sin;
     public float speedchange;
@@ -19,6 +19,7 @@ public class conButton : MonoBehaviour
         button = GetComponent<Button>();
         button.onClick.AddListener(Click);
         big = false;
+        back.SetActive(false);
     }
 
     // Update is called once per frame
@@ -40,6 +41,7 @@ public class conButton : MonoBehaviour
         if (this.tag == "Start")
         {
             board.SetActive(true);
+            back.SetActive(true);
             Board.open=true;
         }
         if (this.tag == "Back")

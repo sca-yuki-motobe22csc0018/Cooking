@@ -4,28 +4,23 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class Board : MonoBehaviour
+public class BoardCheck : MonoBehaviour
 {
     public Image board;
     RectTransform rec;
-    public GameObject fade;
-    public static bool open;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        board=GetComponent<Image>();
-        rec=GetComponent<RectTransform>();
+        board = GetComponent<Image>();
+        rec = GetComponent<RectTransform>();
+        move();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (open == true)
-        {
-            move();
-            open = false;
-        }
+
     }
 
     public void move()
@@ -45,17 +40,6 @@ public class Board : MonoBehaviour
             .AppendInterval(0.25f)
             .Append(rec.DOAnchorPosY(0.0f, 0.25f))
             .AppendInterval(0.1f)
-            .AppendCallback(() => Plays())
-            .Join(rec.DOAnchorPosY(-1500.0f, 0.5f));
-            
-    }
-
-    void Plays()
-    {
-        Debug.Log("Play");
-        Fade.scene = "Main";
-        fade.SetActive(true);
-        Fade.fadeout = true;
-        //this.gameObject.SetActive(false);
+            .Append(rec.DOAnchorPosY(-1500.0f, 0.5f));
     }
 }
