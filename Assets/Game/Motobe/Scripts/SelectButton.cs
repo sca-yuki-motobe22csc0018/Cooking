@@ -60,7 +60,7 @@ public class SelectButton : MonoBehaviour
         }
         else
         {
-            this.gameObject.transform.localScale = new Vector3(1, 1, 1);
+            this.gameObject.transform.localScale = new Vector3(1.1f, 1.1f, 1);
         }
     }
 

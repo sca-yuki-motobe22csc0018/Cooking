@@ -10,7 +10,8 @@ public class Board : MonoBehaviour
     RectTransform rec;
     public GameObject fade;
     public static bool open;
-    
+    [SerializeField] private AudioSource a;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,7 @@ public class Board : MonoBehaviour
         var sequence = DOTween.Sequence();
         sequence.Append(rec.DOAnchorPosY(1300.0f, 0))
             .Join(this.transform.DORotate(new Vector3(0, 0, -80), 0))
+            .AppendCallback(() => Sound())
             .Append(rec.DOAnchorPosY(-150.0f, 0.25f))
             .Join(this.transform.DORotate(new Vector3(0, 0, 60), 0.5f))
             .SetEase(Ease.OutBounce)
@@ -53,5 +55,10 @@ public class Board : MonoBehaviour
     {
         fade.SetActive(true);
         Fade.fadeout = true;
+    }
+
+    void Sound()
+    {
+        a.Play();
     }
 }
