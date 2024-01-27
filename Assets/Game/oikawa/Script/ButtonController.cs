@@ -101,9 +101,9 @@ public class ButtonController : MonoBehaviour
     //@ƒQ[ƒ€I—¹
     public void EndGame()
     {
-        endButton.transform.DOScale(0.9f, 0.1f).SetEase(Ease.OutElastic).OnComplete(() =>
+        endButton.transform.DOScale(0.2f, 0.1f).SetEase(Ease.OutElastic).OnComplete(() =>
         {
-            endButton.transform.DOScale(1.1f, 0.5f).SetEase(Ease.OutElastic).OnComplete(LoadEnd);
+            endButton.transform.DOScale(0.3f, 0.5f).SetEase(Ease.OutElastic).OnComplete(LoadEnd);
         });
     }
     private void LoadEnd()

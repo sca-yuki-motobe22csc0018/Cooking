@@ -56,6 +56,7 @@ TagManager:
   - Enemy
   - Start
   - Back
+  - endless
   layers:
   - Default
   - TransparentFX

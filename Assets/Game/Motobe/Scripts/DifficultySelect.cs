@@ -71,12 +71,21 @@ public class DifficultySelect : MonoBehaviour
     {
         if (this.tag == "easy")
         {
+            /*
             dif=0;
             ClearCount.ClearCountSet=3;
             ClearCount.timer=false;
             confirmation.dif=1;
             Confirmation.SetActive(true);
             //Fade.fadeout = true;
+            */
+
+            dif = 5;
+            ClearCount.ClearCountSet = 99;
+            ClearCount.timer = true;
+            TimeGaugeColorChange.target_Time = 60;
+            confirmation.dif = 7;
+            Confirmation.SetActive(true);
 
         }
         else if (this.tag == "normal")
