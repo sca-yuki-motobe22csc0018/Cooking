@@ -14,6 +14,7 @@ public class IngredientButton : MonoBehaviour
     public float speedchange;
     public float sizechange;
     public static bool start;
+    
 
     void Start()
     {

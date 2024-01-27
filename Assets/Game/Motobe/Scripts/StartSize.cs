@@ -9,6 +9,8 @@ public class StartSize : MonoBehaviour
     float size;
     float speed;
     public GameObject next;
+    public int a;
+    public GameObject b;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,25 @@ public class StartSize : MonoBehaviour
             if (next != null)
             {
                 next.SetActive(true);
+                //if (a == 1)
+                //{
+                //    b.SetActive(true);
+                //}
+            }
+            if (b != null)
+            {
+                if (a==1 && ScoreSet.Star >= 1)
+                { 
+                    b.SetActive(true);
+                }
+                if (a == 2&&ScoreSet.Star>=2)
+                {
+                    b.SetActive(true);
+                }
+                if (a == 3 && ScoreSet.Star >= 3)
+                {
+                    b.SetActive(true);
+                }
             }
         }
     }
