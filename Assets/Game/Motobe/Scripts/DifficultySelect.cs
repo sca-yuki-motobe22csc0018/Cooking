@@ -22,7 +22,7 @@ public class DifficultySelect : MonoBehaviour
     void Start()
     {
         dif=0;
-        for (int i = 0; i < 8; ++i)
+        for (int i = 0; i < 9; ++i)
         {
             Explanation[i].SetActive(false);
         }
@@ -71,22 +71,13 @@ public class DifficultySelect : MonoBehaviour
     {
         if (this.tag == "easy")
         {
-            /*
+            
             dif=0;
             ClearCount.ClearCountSet=3;
             ClearCount.timer=false;
             confirmation.dif=1;
             Confirmation.SetActive(true);
             //Fade.fadeout = true;
-            */
-
-            dif = 5;
-            ClearCount.ClearCountSet = 99;
-            ClearCount.timer = true;
-            TimeGaugeColorChange.target_Time = 60;
-            confirmation.dif = 7;
-            Confirmation.SetActive(true);
-
         }
         else if (this.tag == "normal")
         {
@@ -136,6 +127,15 @@ public class DifficultySelect : MonoBehaviour
             Confirmation.SetActive(true);
             //Fade.fadeout = true;
         }
+        else if (this.tag == "endless")
+        {
+            dif = 6;
+            ClearCount.ClearCountSet = 99;
+            ClearCount.timer = true;
+            TimeGaugeColorChange.target_Time = 60;
+            confirmation.dif = 7;
+            Confirmation.SetActive(true);
+        }
         else if (this.tag == "Mushi")
         {
             if (Order.mushikui == false)
@@ -174,7 +174,7 @@ public class DifficultySelect : MonoBehaviour
     public void UP()
     {
         big = true;
-        for (int i = 0; i < 8; ++i)
+        for (int i = 0; i < 9; ++i)
         {
             Explanation[i].SetActive(false);
         }

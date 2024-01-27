@@ -40,6 +40,10 @@ public class Score : MonoBehaviour
             Order.miss=1;
             ClearCount.score_num+=1;
             PlayerMove.skinNum=1;
+            if (DifficultySelect.dif == 6)
+            {
+                TimeGaugeColorChange.plusTime=3;
+            }
         }
         if (min == true)
         {

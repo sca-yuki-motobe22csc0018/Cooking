@@ -10,11 +10,11 @@ public class confirmation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < 6; ++i)
+        for (int i = 0; i < 7; ++i)
         {
             Dif[i].SetActive(false);
         }
-        for (int i = 0; i < 6; ++i)
+        for (int i = 0; i < 7; ++i)
         {
             Dif2[i].SetActive(false);
         }
@@ -25,11 +25,11 @@ public class confirmation : MonoBehaviour
     {
         if (dif == 1)
         {
-            for (int i = 0; i < 6; ++i)
+            for (int i = 0; i < 7; ++i)
             {
                 Dif[i].SetActive(false);
             }
-            for (int i = 0; i < 6; ++i)
+            for (int i = 0; i < 7; ++i)
             {
                 Dif2[i].SetActive(false);
             }
@@ -39,11 +39,11 @@ public class confirmation : MonoBehaviour
         }
         if (dif == 2)
         {
-            for (int i = 0; i < 6; ++i)
+            for (int i = 0; i < 7; ++i)
             {
                 Dif[i].SetActive(false);
             }
-            for (int i = 0; i < 6; ++i)
+            for (int i = 0; i < 7; ++i)
             {
                 Dif2[i].SetActive(false);
             }
@@ -53,11 +53,11 @@ public class confirmation : MonoBehaviour
         }
         if (dif == 3)
         {
-            for (int i = 0; i < 6; ++i)
+            for (int i = 0; i < 7; ++i)
             {
                 Dif[i].SetActive(false);
             }
-            for (int i = 0; i < 6; ++i)
+            for (int i = 0; i < 7; ++i)
             {
                 Dif2[i].SetActive(false);
             }
@@ -67,11 +67,11 @@ public class confirmation : MonoBehaviour
         }
         if (dif == 4)
         {
-            for (int i = 0; i < 6; ++i)
+            for (int i = 0; i < 7; ++i)
             {
                 Dif[i].SetActive(false);
             }
-            for (int i = 0; i < 6; ++i)
+            for (int i = 0; i < 7; ++i)
             {
                 Dif2[i].SetActive(false);
             }
@@ -81,11 +81,11 @@ public class confirmation : MonoBehaviour
         }
         if (dif == 5)
         {
-            for (int i = 0; i < 6; ++i)
+            for (int i = 0; i < 7; ++i)
             {
                 Dif[i].SetActive(false);
             }
-            for (int i = 0; i < 6; ++i)
+            for (int i = 0; i < 7; ++i)
             {
                 Dif2[i].SetActive(false);
             }
@@ -95,16 +95,30 @@ public class confirmation : MonoBehaviour
         }
         if (dif == 6)
         {
-            for (int i = 0; i < 6; ++i)
+            for (int i = 0; i < 7; ++i)
             {
                 Dif[i].SetActive(false);
             }
-            for (int i = 0; i < 6; ++i)
+            for (int i = 0; i < 7; ++i)
             {
                 Dif2[i].SetActive(false);
             }
             Dif2[5].SetActive(true);
             Dif[5].SetActive(true);
+            dif = 0;
+        }
+        if (dif == 7)
+        {
+            for (int i = 0; i < 7; ++i)
+            {
+                Dif[i].SetActive(false);
+            }
+            for (int i = 0; i < 7; ++i)
+            {
+                Dif2[i].SetActive(false);
+            }
+            Dif2[6].SetActive(true);
+            Dif[6].SetActive(true);
             dif = 0;
         }
     }

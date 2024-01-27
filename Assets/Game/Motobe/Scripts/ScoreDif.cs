@@ -36,5 +36,9 @@ public class ScoreDif : MonoBehaviour
         {
             Dif[5].SetActive(true);
         }
+        else if (DifficultySelect.dif == 6)
+        {
+            Dif[6].SetActive(true);
+        }
     }
 }
