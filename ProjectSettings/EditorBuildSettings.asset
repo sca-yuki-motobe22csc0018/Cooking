@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game/Scenes/TitleScene.unity
     guid: dc61ae564c65fd94087657e1ab3edd38
-  - enabled: 1
-    path: Assets/Game/Scenes/MainGameSelect.unity
+  - enabled: 0
+    path: "Assets/Game/Scenes/\u30E1\u30A4\u30F3\u3058\u3083\u306A\u3044\u3084\u3064/MainGameSelect.unity"
     guid: 4b5d834756e7fdf4f9a4fc6e4840fe77
+  - enabled: 1
+    path: Assets/Game/Scenes/MainGameSelect2.unity
+    guid: 3bca9ddad61f2a74e935c5d7fbb02fd5
   - enabled: 1
     path: Assets/Game/Scenes/Main.unity
     guid: be6c4a9862da8f440b4decdef170f7f1

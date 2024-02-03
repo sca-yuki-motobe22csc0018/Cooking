@@ -52,7 +52,7 @@ public class ButtonController : MonoBehaviour
         startButton.transform.localScale = defaltStartButtonScale;
         //ïœçXÇµÇ‹ÇµÇΩ ñ{ïî
         //SceneManager.LoadScene("MainGame");
-        Fade.scene = "MainGameSelect";
+        Fade.scene = "MainGameSelect2";
         fade.SetActive(true);
         Fade.fadeout = true;
 

@@ -57,6 +57,8 @@ TagManager:
   - Start
   - Back
   - endless
+  - next
+  - back
   layers:
   - Default
   - TransparentFX
