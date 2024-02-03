@@ -14,7 +14,7 @@ public class StartSize : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxSize = 1.0f;
+        maxSize = 1.1f;
         size = 0;
         if(next != null)
         next.SetActive(false);
