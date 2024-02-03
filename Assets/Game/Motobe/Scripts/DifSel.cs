@@ -9,10 +9,13 @@ public class DifSel : MonoBehaviour
     bool big;
     public static int dif = 0;
     public GameObject Confirmation;
+    float minSize;
+    float size;
     float sin;
     float sin2;
     public float speedchange;
     public float sizechange;
+    bool back;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +23,8 @@ public class DifSel : MonoBehaviour
         button = GetComponent<Button>();
         button.onClick.AddListener(Click);
         dif = 0;
+        minSize = 1f;
+        size = 0;
     }
 
     // Update is called once per frame
@@ -34,6 +39,20 @@ public class DifSel : MonoBehaviour
         else
         {
             this.gameObject.transform.localScale = new Vector3(1 + sin2 * sizechange/4, 1 + sin2 * sizechange/4, 1);
+        }
+        if (back == true)
+        {
+            if (size < minSize)
+            {
+                Confirmation.gameObject.transform.localScale = new Vector3(size, size, 0);
+                size += 0.1f;
+            }
+            else
+            {
+                size = 0;
+                back = false;
+                //Confirmation.gameObject.SetActive(false);
+            }
         }
     }
 
@@ -105,6 +124,7 @@ public class DifSel : MonoBehaviour
             confirmation.dif = 7;
             Confirmation.SetActive(true);
         }
+        back=true;
     }
 
     public void UP()

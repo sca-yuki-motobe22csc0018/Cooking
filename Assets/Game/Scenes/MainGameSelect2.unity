@@ -1480,14 +1480,13 @@ GameObject:
   - component: {fileID: 922242956}
   - component: {fileID: 922242958}
   - component: {fileID: 922242957}
-  - component: {fileID: 922242959}
   m_Layer: 5
   m_Name: BackgroNext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &922242956
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1547,21 +1546,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922242955}
   m_CullTransparentMesh: 1
---- !u!114 &922242959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922242955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d75b081e723569e4f99bcef7303f9411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  next: {fileID: 0}
-  a: 0
-  b: {fileID: 0}
 --- !u!4 &1188877383 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2609507647339404635, guid: 997674dc04d9a0c46b8611c2214641d8, type: 3}
