@@ -386,6 +386,7 @@ GameObject:
   m_Component:
   - component: {fileID: 300112411}
   - component: {fileID: 300112410}
+  - component: {fileID: 300112413}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -420,6 +421,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &300112413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300112409}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ada49b7d1a7e24caca9ccef069765b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BGM_Volume: 0.1
+  SE_Volume: 0.1
+  Mute: 0
+  BGM_Clips:
+  - {fileID: 8300000, guid: 284d8b5fc71eaf04187c1ef913044d10, type: 3}
+  - {fileID: 8300000, guid: 52097d2f55775d444b2ccd0b6f99dc5a, type: 3}
+  - {fileID: 8300000, guid: c6f341683c5c48146bd83b045c28d619, type: 3}
+  SE_Clips:
+  - {fileID: 8300000, guid: 9fd9099eb547921418e86704c925f767, type: 3}
+  - {fileID: 8300000, guid: 281ca26608e65424fa505bad6269ec49, type: 3}
+  - {fileID: 8300000, guid: 2c5aefc042caea04b93b7537dfda8dd5, type: 3}
+  - {fileID: 8300000, guid: 7da2aaf7abb42d945861105f0ec80756, type: 3}
+  - {fileID: 8300000, guid: 35b136ea39dd1ca44aa4f923cb95abd1, type: 3}
+  - {fileID: 8300000, guid: adc7c1ad16fb32e47a789f5309b76119, type: 3}
 --- !u!1 &396738111 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5861714866060960655, guid: b825f1ce2ec085540834b9fa48596eec, type: 3}
@@ -1356,18 +1383,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1133781638}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 9fd9099eb547921418e86704c925f767, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1335638487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1458,6 +1473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1419849028}
   - component: {fileID: 1419849027}
+  - component: {fileID: 1419849029}
   m_Layer: 0
   m_Name: GameSystem
   m_TagString: Untagged
@@ -1499,6 +1515,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1419849029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419849026}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cdfecd92d6845e43a309973ee9db4f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1444596712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2538,6 +2566,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SE_Object
       objectReference: {fileID: 0}
+    - target: {fileID: 3138028818972200153, guid: b10d3acbdb4411d41b77efe02cc4a70d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2591,9 +2623,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6382878869760886072, guid: 4a72b12e5677b5341abe4ba59848fbcc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7553595906169177548, guid: 4a72b12e5677b5341abe4ba59848fbcc, type: 3}
       propertyPath: m_Name
       value: BGM_Object
+      objectReference: {fileID: 0}
+    - target: {fileID: 7553595906169177548, guid: 4a72b12e5677b5341abe4ba59848fbcc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

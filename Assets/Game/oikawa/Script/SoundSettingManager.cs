@@ -54,18 +54,4 @@ public class SoundSettingManager : MonoBehaviour
         SE_audioSource.GetComponent<AudioSource>().volume = newVolume;
         SE_Sub_audioSource.GetComponent<AudioSource>().volume = newVolume;
     }
-
-
-    //  BGM‚ð–Â‚ç‚·
-    public void Play_BGM(int bgmIndex)
-    {
-        BGM_audioSource.GetComponent<AudioSource>().clip = BGMs[bgmIndex];
-        BGM_audioSource.GetComponent<AudioSource>().Play();
-    }
-    //  SE‚ð–Â‚ç‚·
-    public void Play_SE(int seIndex)
-    {
-        SE_audioSource.GetComponent<AudioSource>().clip = SEs[seIndex];
-        SE_audioSource.GetComponent<AudioSource>().Play();
-    }
 }
