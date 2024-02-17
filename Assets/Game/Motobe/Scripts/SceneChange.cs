@@ -52,7 +52,7 @@ public class SceneChange : MonoBehaviour
         {
             fade.SetActive(true);
             Fade.fadeout = true;
-            Fade.scene = "MainGameSelect";
+            Fade.scene = "MainGameSelect2";
         }
         else if (this.tag == "Del")
         {
