@@ -7,7 +7,7 @@ public class DifSkin : MonoBehaviour
 {
     public Sprite[] skin;
     public Image me;
-    public static int skinNum;
+    public static int skinNum=1;
 
     // Start is called before the first frame update
     void Start()
