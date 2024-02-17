@@ -16,6 +16,7 @@ public class DifSel : MonoBehaviour
     public float speedchange;
     public float sizechange;
     bool back;
+    public GameObject Bg;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,8 @@ public class DifSel : MonoBehaviour
         dif = 0;
         minSize = 1f;
         size = 0;
+        Confirmation.SetActive(false);
+        Bg.SetActive(false);
     }
 
     // Update is called once per frame
@@ -58,6 +61,7 @@ public class DifSel : MonoBehaviour
 
     void Click()
     {
+        Bg.SetActive(true);
         if (this.tag == "easy")
         {
             dif = 0;

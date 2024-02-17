@@ -14,6 +14,7 @@ public class DifBack : MonoBehaviour
     bool back;
     public float speedchange;
     public float sizechange;
+    public GameObject Bg;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +40,7 @@ public class DifBack : MonoBehaviour
             {
                 size = 1;
                 back=false;
+                Bg.SetActive(false);
                 Exa.gameObject.SetActive(false);
             }
         }
@@ -57,7 +59,8 @@ public class DifBack : MonoBehaviour
 
     void Click()
     {
-        back=true;
+        
+        back =true;
     }
 
     public void UP()
