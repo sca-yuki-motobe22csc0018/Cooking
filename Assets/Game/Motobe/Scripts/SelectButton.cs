@@ -69,6 +69,7 @@ public class SelectButton : MonoBehaviour
         ShelfSelect.Change=true;
         if (TagNum == 1)
         {
+            this.gameObject.transform.position += new Vector3(0,10,0);
             VegetableShelf.SetActive(true);
             FishMeatShelf.SetActive(false);
             OthersShelf.SetActive(false);
