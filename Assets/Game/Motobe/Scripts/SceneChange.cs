@@ -41,7 +41,8 @@ public class SceneChange : MonoBehaviour
             Fade.fadeout = true;
             Fade.scene = "TitleScene";
             //SceneManager.LoadScene("TitleScene");
-        }else if (this.tag == "Restart")
+        }
+        else if (this.tag == "Restart")
         {
             fade.SetActive(true);
             Fade.fadeout = true;
@@ -58,7 +59,7 @@ public class SceneChange : MonoBehaviour
         {
             setting.SetActive(false);
         }
-        
+
     }
 
     public void UP()

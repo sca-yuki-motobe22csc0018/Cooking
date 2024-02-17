@@ -9,16 +9,11 @@ public class SoundSettingManager : MonoBehaviour
     private Slider BGM_VolumeSlider;
     private Slider SE_VolumeSlider;
 
-    //  オーディオソース
-    public GameObject BGM_audioSource;
-    public GameObject SE_audioSource;
-    public GameObject SE_Sub_audioSource;
-
     //  BGM・SEリスト
     public List<AudioClip> BGMs;
     public List<AudioClip> SEs;
 
- 
+
     void Start()
     {
         //  シーン内からスライダーを探して取得
@@ -46,12 +41,11 @@ public class SoundSettingManager : MonoBehaviour
     void ChangeVolumeBGM(float newVolume)
     {
         //  スライダーの値によって音量を調整
-        BGM_audioSource.GetComponent<AudioSource>().volume = newVolume;
+        SoundEditer.instance.SetVolume_BGM(newVolume);
     }
     void ChangeVolumeSE(float newVolume)
     {
         //  スライダーの値によって音量を調整
-        SE_audioSource.GetComponent<AudioSource>().volume = newVolume;
-        SE_Sub_audioSource.GetComponent<AudioSource>().volume = newVolume;
+        SoundEditer.instance.SetVolume_SE(newVolume);
     }
 }
