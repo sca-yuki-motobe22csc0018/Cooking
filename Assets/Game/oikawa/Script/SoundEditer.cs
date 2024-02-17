@@ -51,6 +51,25 @@ public class SoundEditer : MonoBehaviour
 
     private int currentBgmIndex = 999;
 
+
+    public void SetVolume_SE(float volume)
+    {
+        SE_Volume = volume;
+        foreach (AudioSource source in SE_Sources)
+        {
+            source.volume = SE_Volume;
+        }
+    }
+
+    public void SetVolume_BGM(float volume)
+    {
+        BGM_Volume = volume;
+        foreach (AudioSource source in BGM_Sources)
+        {
+            source.volume = BGM_Volume;
+        }
+    }
+
     void Awake()
     {
         //  シングルトンかつ、シーン変遷しても破棄されないようにする
@@ -136,7 +155,7 @@ public class SoundEditer : MonoBehaviour
         else
         {
             //  クロスフェード処理
-            StartCoroutine(CrossFadeChangeBMG(index, loopFlag));
+            StartCoroutine(CrossFadeChangeBGM(index, loopFlag));
         }
     }
 
@@ -146,7 +165,7 @@ public class SoundEditer : MonoBehaviour
     /// <param name="index"></param>
     /// <param name="loopFlag"></param>
     /// <returns></returns>
-    private IEnumerator CrossFadeChangeBMG(int index, bool loopFlag)
+    private IEnumerator CrossFadeChangeBGM(int index, bool loopFlag)
     {
         isCrossFading = true;
         if (BGM_Sources[0].clip != null)

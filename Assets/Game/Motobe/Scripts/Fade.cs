@@ -14,7 +14,7 @@ public class Fade : MonoBehaviour
     public static string scene;
     // Start is called before the first frame update
     void Start()
-    { 
+    {
         fader = 1;
         a = -0.05f;
         fadeout = false;
@@ -29,7 +29,8 @@ public class Fade : MonoBehaviour
         if (fadeout == true)
         {
             a = 0.05f;
-        }else
+        }
+        else
         if (fader < 0)
         {
             fader = 0;
@@ -37,6 +38,16 @@ public class Fade : MonoBehaviour
         }
         if (fader > 1)
         {
+            //  及川：追加(シーン変更時サウンド流す)
+            if (scene == "Main")
+            {
+                SoundEditer.instance.PlayBGM(SoundEditer.BGM_Type.MAIN);
+            }
+            if (scene == "Title")
+            {
+                SoundEditer.instance.PlayBGM(SoundEditer.BGM_Type.TITLE);
+            }
+
             fadeout = false;
             SceneManager.LoadScene(scene);
         }
