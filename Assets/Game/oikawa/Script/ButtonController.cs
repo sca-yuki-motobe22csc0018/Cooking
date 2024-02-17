@@ -35,12 +35,18 @@ public class ButtonController : MonoBehaviour
         defaltSettingButtonScale = settingButton.transform.localScale;
         defaltEndButtonScale = endButton.transform.localScale;
         defaltTitleButtonScale = titleButton.transform.localScale;
+
+        //  タイトルBGM
+        SoundEditer.instance.PlayBGM(SoundEditer.BGM_Type.TITLE);
     }
 
 
     // ゲームスタート
     public void StartGame()
     {
+        //  セレクト画面用BGM
+        SoundEditer.instance.PlayBGM(SoundEditer.BGM_Type.SELECT);
+
         startButton.transform.DOScale(0.2f, 0.1f).SetEase(Ease.OutElastic).OnComplete(() =>
         {
             startButton.transform.DOScale(0.3f, 0.5f).SetEase(Ease.OutElastic).OnComplete(LoadMainGame);
@@ -51,12 +57,10 @@ public class ButtonController : MonoBehaviour
         startButton.transform.DOKill();
         startButton.transform.localScale = defaltStartButtonScale;
         //変更しました 本部
-        //SceneManager.LoadScene("MainGame");
-        Fade.scene = "MainGameSelect2";
-        fade.SetActive(true);
-        Fade.fadeout = true;
-
-
+        SceneManager.LoadScene("Main");
+        //Fade.scene = "MainGameSelect2";
+        //fade.SetActive(true);
+        //Fade.fadeout = true;
     }
 
 
@@ -64,9 +68,9 @@ public class ButtonController : MonoBehaviour
     public void GameSetting()
     {
         settingButton.transform.DOScale(0.2f, 0.1f).SetEase(Ease.OutElastic).OnComplete(() =>
-        {
-            settingButton.transform.DOScale(0.3f, 0.5f).SetEase(Ease.OutElastic).OnComplete(LoadGameSetting);
-        });
+      {
+          settingButton.transform.DOScale(0.3f, 0.5f).SetEase(Ease.OutElastic).OnComplete(LoadGameSetting);
+      });
     }
     private void LoadGameSetting()  //  セッティング画面読み込み
     {
@@ -82,6 +86,8 @@ public class ButtonController : MonoBehaviour
     // タイトルへ
     public void TitleButton()
     {
+        SoundEditer.instance.PlayBGM(SoundEditer.BGM_Type.TITLE);  //  タイトルBGM
+
         titleButton.transform.DOScale(0.2f, 0.1f).SetEase(Ease.OutElastic).OnComplete(() =>
         {
             titleButton.transform.DOScale(0.3f, 0.5f).SetEase(Ease.OutElastic).OnComplete(LoadTitleScene);

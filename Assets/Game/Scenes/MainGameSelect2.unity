@@ -3504,6 +3504,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SE
       objectReference: {fileID: 0}
+    - target: {fileID: 8231865206192802195, guid: 997674dc04d9a0c46b8611c2214641d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -3885,6 +3889,10 @@ PrefabInstance:
     - target: {fileID: 7553595906169177548, guid: 4a72b12e5677b5341abe4ba59848fbcc, type: 3}
       propertyPath: m_Name
       value: BGM_Object
+      objectReference: {fileID: 0}
+    - target: {fileID: 7553595906169177548, guid: 4a72b12e5677b5341abe4ba59848fbcc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
