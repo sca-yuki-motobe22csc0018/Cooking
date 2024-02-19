@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Button_SEs : MonoBehaviour
 {
+    
     public void Button_ON_SE()
     {
         //  ボタンにカーソルを合わせた時
@@ -15,4 +16,5 @@ public class Button_SEs : MonoBehaviour
         //  ボタンクリック時
         SoundEditer.instance.PlaySE(SoundEditer.SE_Type.CLICK);
     }
+    
 }

@@ -123,20 +123,10 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &61530608 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7553595906169177548, guid: 4a72b12e5677b5341abe4ba59848fbcc, type: 3}
-  m_PrefabInstance: {fileID: 1968705252}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &61530610 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4850070619823940689, guid: 4a72b12e5677b5341abe4ba59848fbcc, type: 3}
   m_PrefabInstance: {fileID: 1968705252}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &92063520 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5697683360684467499, guid: 997674dc04d9a0c46b8611c2214641d8, type: 3}
-  m_PrefabInstance: {fileID: 639884163}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &127942153
 GameObject:
@@ -155,7 +145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &127942154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,9 +170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795472febd9cb244099ce54ed3103ef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BGM_audioSource: {fileID: 61530608}
-  SE_audioSource: {fileID: 92063520}
-  SE_Sub_audioSource: {fileID: 722964284}
   BGMs: []
   SEs: []
 --- !u!4 &127942156
@@ -1515,11 +1502,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668973915}
   m_CullTransparentMesh: 1
---- !u!1 &722964284 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4602168089475412103, guid: 997674dc04d9a0c46b8611c2214641d8, type: 3}
-  m_PrefabInstance: {fileID: 639884163}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &742538214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2734,10 +2716,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a155968656356b14784185dbc12203e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pt1: {fileID: 7295846796279815470, guid: 6c6f39ca95befa84ca081d91813226fe, type: 3}
-  Pt2: {fileID: 1930610288557424540, guid: d035b001913297947818d491ef7c738c, type: 3}
-  Pt3: {fileID: 0}
-  Pt4: {fileID: 0}
+  Pt1: {fileID: 7295846796279815470, guid: 89870f8a16990564cac933170bdf0741, type: 3}
+  Pt2: {fileID: 7295846796279815470, guid: 0fa056d8c9f78264380c1135d11cd719, type: 3}
+  Pt3: {fileID: 7295846796279815470, guid: 1f6e5a513a1c85e4bb0408233be0bac9, type: 3}
+  Pt4: {fileID: 7295846796279815470, guid: b47e81ba8dc159c4298c9ce091140110, type: 3}
 --- !u!1 &1523253419
 GameObject:
   m_ObjectHideFlags: 0

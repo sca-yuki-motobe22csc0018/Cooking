@@ -47,9 +47,9 @@ public class ButtonController : MonoBehaviour
         //  セレクト画面用BGM
         SoundEditer.instance.PlayBGM(SoundEditer.BGM_Type.SELECT);
 
-        startButton.transform.DOScale(0.2f, 0.1f).SetEase(Ease.OutElastic).OnComplete(() =>
+        startButton.transform.DOScale(0.1f, 0.1f).SetEase(Ease.OutElastic).OnComplete(() =>
         {
-            startButton.transform.DOScale(0.3f, 0.5f).SetEase(Ease.OutElastic).OnComplete(LoadMainGame);
+            startButton.transform.DOScale(0.25f, 0.5f).SetEase(Ease.OutElastic).OnComplete(LoadMainGame);
         });
     }
     private void LoadMainGame()  //  メインゲームシーン読み込み
@@ -57,19 +57,19 @@ public class ButtonController : MonoBehaviour
         startButton.transform.DOKill();
         startButton.transform.localScale = defaltStartButtonScale;
         //変更しました 本部
-        SceneManager.LoadScene("Main");
-        //Fade.scene = "MainGameSelect2";
-        //fade.SetActive(true);
-        //Fade.fadeout = true;
+        //SceneManager.LoadScene("Main");
+        Fade.scene = "MainGameSelect2";
+        fade.SetActive(true);
+        Fade.fadeout = true;
     }
 
 
     // 設定画面開く
     public void GameSetting()
     {
-        settingButton.transform.DOScale(0.2f, 0.1f).SetEase(Ease.OutElastic).OnComplete(() =>
+        settingButton.transform.DOScale(0.15f, 0.1f).SetEase(Ease.OutElastic).OnComplete(() =>
       {
-          settingButton.transform.DOScale(0.3f, 0.5f).SetEase(Ease.OutElastic).OnComplete(LoadGameSetting);
+          settingButton.transform.DOScale(0.25f, 0.5f).SetEase(Ease.OutElastic).OnComplete(LoadGameSetting);
       });
     }
     private void LoadGameSetting()  //  セッティング画面読み込み
@@ -88,9 +88,9 @@ public class ButtonController : MonoBehaviour
     {
         SoundEditer.instance.PlayBGM(SoundEditer.BGM_Type.TITLE);  //  タイトルBGM
 
-        titleButton.transform.DOScale(0.2f, 0.1f).SetEase(Ease.OutElastic).OnComplete(() =>
+        titleButton.transform.DOScale(0.15f, 0.1f).SetEase(Ease.OutElastic).OnComplete(() =>
         {
-            titleButton.transform.DOScale(0.3f, 0.5f).SetEase(Ease.OutElastic).OnComplete(LoadTitleScene);
+            titleButton.transform.DOScale(0.25f, 0.5f).SetEase(Ease.OutElastic).OnComplete(LoadTitleScene);
         });
     }
     private void LoadTitleScene()  //  タイトル画面読み込み
@@ -107,9 +107,9 @@ public class ButtonController : MonoBehaviour
     //　ゲーム終了
     public void EndGame()
     {
-        endButton.transform.DOScale(0.2f, 0.1f).SetEase(Ease.OutElastic).OnComplete(() =>
+        endButton.transform.DOScale(0.15f, 0.1f).SetEase(Ease.OutElastic).OnComplete(() =>
         {
-            endButton.transform.DOScale(0.3f, 0.5f).SetEase(Ease.OutElastic).OnComplete(LoadEnd);
+            endButton.transform.DOScale(0.25f, 0.5f).SetEase(Ease.OutElastic).OnComplete(LoadEnd);
         });
     }
     private void LoadEnd()

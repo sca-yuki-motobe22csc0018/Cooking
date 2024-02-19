@@ -26,7 +26,7 @@ public class GameController : MonoBehaviour
     void Update()
     {
         timer+=Time.deltaTime;
-        if (timer > TimeSet + 1)
+        if (timer > TimeSet + 1&&Board.timer==true)
         {
             TimeSet+=1;
         }
