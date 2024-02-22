@@ -17,6 +17,7 @@ public class SoundEditer : MonoBehaviour
         TITLE = 0,
         SELECT = 1,
         MAIN = 2,
+        SCORE = 3,
         SILENCE = 999,
     }
 
@@ -44,7 +45,7 @@ public class SoundEditer : MonoBehaviour
     public AudioClip[] SE_Clips;
 
     //=====AudioSource=====
-    private AudioSource[] BGM_Sources = new AudioSource[2];
+    private AudioSource[] BGM_Sources = new AudioSource[4];
     private AudioSource[] SE_Sources = new AudioSource[16];
 
     private bool isCrossFading;

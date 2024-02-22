@@ -369,9 +369,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1133632528}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 1504100813}
+        m_TargetAssemblyTypeName: Button_SEs, Assembly-CSharp
+        m_MethodName: Button_Click_SE
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -462,9 +462,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 306696373}
-          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
+        - m_Target: {fileID: 1504100813}
+          m_TargetAssemblyTypeName: Button_SEs, Assembly-CSharp
+          m_MethodName: Button_ON_SE
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -565,11 +565,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302317816}
   m_CullTransparentMesh: 1
---- !u!82 &306696373 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2848859887632033607, guid: 997674dc04d9a0c46b8611c2214641d8, type: 3}
-  m_PrefabInstance: {fileID: 639884163}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &344376581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,9 +1155,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1133632528}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 1504100813}
+        m_TargetAssemblyTypeName: Button_SEs, Assembly-CSharp
+        m_MethodName: Button_Click_SE
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1253,9 +1248,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 306696373}
-          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
+        - m_Target: {fileID: 1504100813}
+          m_TargetAssemblyTypeName: Button_SEs, Assembly-CSharp
+          m_MethodName: Button_ON_SE
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2144,11 +2139,6 @@ MonoBehaviour:
   m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
   m_EffectDistance: {x: 4, y: -4}
   m_UseGraphicAlpha: 1
---- !u!82 &1133632528 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 31134519502358709, guid: 997674dc04d9a0c46b8611c2214641d8, type: 3}
-  m_PrefabInstance: {fileID: 639884163}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1192438852
 GameObject:
   m_ObjectHideFlags: 0
@@ -2634,6 +2624,7 @@ GameObject:
   - component: {fileID: 1504100808}
   - component: {fileID: 1504100811}
   - component: {fileID: 1504100812}
+  - component: {fileID: 1504100813}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -2720,6 +2711,18 @@ MonoBehaviour:
   Pt2: {fileID: 7295846796279815470, guid: 0fa056d8c9f78264380c1135d11cd719, type: 3}
   Pt3: {fileID: 7295846796279815470, guid: 1f6e5a513a1c85e4bb0408233be0bac9, type: 3}
   Pt4: {fileID: 7295846796279815470, guid: b47e81ba8dc159c4298c9ce091140110, type: 3}
+--- !u!114 &1504100813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504100807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9582e06942a86ea4191ef25c25a63527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1523253419
 GameObject:
   m_ObjectHideFlags: 0
@@ -3149,9 +3152,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 306696373}
-          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
+        - m_Target: {fileID: 1504100813}
+          m_TargetAssemblyTypeName: Button_SEs, Assembly-CSharp
+          m_MethodName: Button_ON_SE
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3235,9 +3238,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1133632528}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 1504100813}
+        m_TargetAssemblyTypeName: Button_SEs, Assembly-CSharp
+        m_MethodName: Button_Click_SE
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

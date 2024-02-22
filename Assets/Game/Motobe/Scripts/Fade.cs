@@ -38,7 +38,7 @@ public class Fade : MonoBehaviour
         }
         if (fader > 1)
         {
-            
+
             //  及川：追加(シーン変更時サウンド流す)
             if (scene == "Main")
             {
@@ -46,9 +46,18 @@ public class Fade : MonoBehaviour
             }
             if (scene == "Title")
             {
+                Debug.Log("hoge");
                 SoundEditer.instance.PlayBGM(SoundEditer.BGM_Type.TITLE);
             }
-            
+            if (scene == "MainGameSelect2")
+            {
+                SoundEditer.instance.PlayBGM(SoundEditer.BGM_Type.SELECT);
+            }
+            if (scene == "Score")
+            {
+                SoundEditer.instance.PlayBGM(SoundEditer.BGM_Type.SCORE);
+            }
+
             fadeout = false;
             SceneManager.LoadScene(scene);
         }

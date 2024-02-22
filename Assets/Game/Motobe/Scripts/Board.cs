@@ -10,14 +10,17 @@ public class Board : MonoBehaviour
     RectTransform rec;
     public GameObject fade;
     public static bool open;
-    [SerializeField] private AudioSource a;
+
+    //  変更：おいかわ  
+    //[SerializeField] private AudioSource a;
+
     public static bool timer;
     // Start is called before the first frame update
     void Start()
     {
-        timer=true;
-        board=GetComponent<Image>();
-        rec=GetComponent<RectTransform>();
+        timer = true;
+        board = GetComponent<Image>();
+        rec = GetComponent<RectTransform>();
     }
 
     // Update is called once per frame
@@ -32,7 +35,7 @@ public class Board : MonoBehaviour
 
     public void move()
     {
-        timer=false;
+        timer = false;
         var sequence = DOTween.Sequence();
         sequence.Append(rec.DOAnchorPosY(1300.0f, 0))
             .Join(this.transform.DORotate(new Vector3(0, 0, -80), 0))
@@ -61,6 +64,8 @@ public class Board : MonoBehaviour
 
     void Sound()
     {
-        a.Play();
+        //  変更：オイカワ
+        SoundEditer.instance.PlaySE(SoundEditer.SE_Type.BELL);
+        //  a.Play();
     }
 }
