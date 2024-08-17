@@ -14,6 +14,8 @@ public class StartSize : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (b != null)
+        b.gameObject.SetActive(false);
         maxSize = 1.1f;
         size = 0;
         if(next != null)
@@ -34,9 +36,9 @@ public class StartSize : MonoBehaviour
             if (next != null)
             {
                 next.SetActive(true);
-                //if (a == 1)
-                //{
-                //    b.SetActive(true);
+            //    //if (a == 1)
+            //    //{
+            //    //    b.SetActive(true);
                 //}
             }
             if (b != null)

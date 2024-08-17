@@ -12,31 +12,31 @@ public class ScoreDif : MonoBehaviour
         {
             Dif[i].SetActive(false);
         }
-        if (DifficultySelect.dif == 0)
+        if (DifSel.dif == 0)
         {
             Dif[0].SetActive(true);
         }
-        else if (DifficultySelect.dif == 1)
+        else if (DifSel.dif == 1)
         {
             Dif[1].SetActive(true);
         }
-        else if (DifficultySelect.dif == 2)
+        else if (DifSel.dif == 2)
         {
             Dif[2].SetActive(true);
         }
-        else if (DifficultySelect.dif == 3)
+        else if (DifSel.dif == 3)
         {
             Dif[3].SetActive(true);
         }
-        else if (DifficultySelect.dif == 4)
+        else if (DifSel.dif == 4)
         {
             Dif[4].SetActive(true);
         }
-        else if (DifficultySelect.dif == 5)
+        else if (DifSel.dif == 5)
         {
             Dif[5].SetActive(true);
         }
-        else if (DifficultySelect.dif == 6)
+        else if (DifSel.dif == 6)
         {
             Dif[6].SetActive(true);
         }

@@ -29,9 +29,14 @@ public class ScoreSet : MonoBehaviour
                 Star = 2;
                 PlayerMove.skinNum = 0;
             }
-            else
+            else if (Score.score_num==0)
             {
                 Star = 1;
+                PlayerMove.skinNum = 2;
+            }
+            else if (Score.score_num < 0)
+            {
+                Star = 0;
                 PlayerMove.skinNum = 2;
             }
         }

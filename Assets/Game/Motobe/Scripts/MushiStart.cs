@@ -41,6 +41,7 @@ public class MushiStart : MonoBehaviour
         Fade.scene="Main";
         if (this.tag == "Untagged")
         {
+            Order.mushikui = false;
             board.SetActive(true);
             back.SetActive(true);
             Board.open = true;
